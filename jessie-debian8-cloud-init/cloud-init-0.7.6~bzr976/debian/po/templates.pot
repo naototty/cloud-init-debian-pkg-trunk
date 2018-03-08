@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cloud-init\n"
+"Report-Msgid-Bugs-To: cloud-init@packages.debian.org\n"
+"POT-Creation-Date: 2013-05-28 07:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: multiselect
+#. Description
+#: ../cloud-init.templates:1001
+msgid "Which data sources should be searched?"
+msgstr ""
+
+#. Type: multiselect
+#. Description
+#: ../cloud-init.templates:1001
+msgid ""
+"Cloud-init supports searching different \"Data Sources\" for information "
+"that it uses to configure a cloud instance."
+msgstr ""
+
+#. Type: multiselect
+#. Description
+#: ../cloud-init.templates:1001
+msgid ""
+"Warning: Only select 'Ec2' if this system will be run on a system with the "
+"EC2 metadata service present.  Doing so incorrectly will result in a "
+"substantial timeout on boot."
+msgstr ""

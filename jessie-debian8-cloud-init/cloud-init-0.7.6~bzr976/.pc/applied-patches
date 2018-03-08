@@ -1,0 +1,2 @@
+fix-path-to-blkid-binary.patch
+disable-rhel-set-hostname-test.patch

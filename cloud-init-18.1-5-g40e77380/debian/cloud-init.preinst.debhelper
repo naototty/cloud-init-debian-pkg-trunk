@@ -1,0 +1,24 @@
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/init/cloud-config.conf 0.7.9-243-ge74d775-0ubuntu2~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/init/cloud-final.conf 0.7.9-243-ge74d775-0ubuntu2~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/init/cloud-init-blocknet.conf 0.7.9-243-ge74d775-0ubuntu2~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/init/cloud-init-container.conf 0.7.9-243-ge74d775-0ubuntu2~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/init/cloud-init-local.conf 0.7.9-243-ge74d775-0ubuntu2~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/init/cloud-init-nonet.conf 0.7.9-243-ge74d775-0ubuntu2~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/init/cloud-init.conf 0.7.9-243-ge74d775-0ubuntu2~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installdeb
+dpkg-maintscript-helper rm_conffile /etc/init/cloud-log-shutdown.conf 0.7.9-243-ge74d775-0ubuntu2~ -- "$@"
+# End automatically added section

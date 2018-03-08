@@ -1,0 +1,510 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: source package cloud-init
+dpkg-buildpackage: source version 18.1-5-g40e77380-0ubuntu1
+dpkg-buildpackage: source distribution bionic
+dpkg-buildpackage: source changed by Chad Smith <chad.smith@canonical.com>
+ dpkg-source --before-build cloud-init-18.1-5-g40e77380
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with python3,systemd --buildsystem pybuild
+   dh_testdir -O--buildsystem=pybuild
+   dh_auto_clean -O--buildsystem=pybuild
+I: pybuild base:170: python3.4 setup.py clean 
+running clean
+removing '/root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.4' does not exist -- can't clean it
+   dh_clean -O--buildsystem=pybuild
+ debian/rules build
+dh build --with python3,systemd --buildsystem pybuild
+   dh_testdir -O--buildsystem=pybuild
+   dh_update_autotools_config -O--buildsystem=pybuild
+   dh_auto_configure -O--buildsystem=pybuild
+I: pybuild base:170: python3.4 setup.py config 
+running config
+   dh_auto_build -O--buildsystem=pybuild
+I: pybuild base:170: /usr/bin/python3 setup.py build 
+running build
+running build_py
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/type_utils.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/url_helper.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/stages.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/settings.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/netinfo.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/dhclient_hook.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/ec2_utils.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/patcher.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/temp_utils.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/cs_utils.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/atomic_helper.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/cloud.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/importer.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/apport.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/log.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/registry.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/util.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/serial.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/templater.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/simpletable.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/version.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/signal_handler.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/ssh_util.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/safeyaml.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/helpers.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/user_data.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/gpg.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+copying cloudinit/warnings.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceDigitalOcean.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceOpenStack.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceEc2.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceNone.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceCloudSigma.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceSmartOS.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceScaleway.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceAltCloud.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceOVF.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceMAAS.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceAliYun.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceOpenNebula.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceConfigDrive.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceNoCloud.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceCloudStack.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceGCE.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceAzure.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+copying cloudinit/sources/DataSourceBigstep.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_ssh.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_timezone.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_yum_add_repo.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_update_etc_hosts.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_fan.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_byobu.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_final_message.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_phone_home.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_locale.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_lxd.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_set_passwords.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_package_update_upgrade_install.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/schema.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_ntp.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_ssh_import_id.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_emit_upstart.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_update_hostname.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_users_groups.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_rh_subscription.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_growpart.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_write_files.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_seed_random.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_snap_config.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_disk_setup.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_rsyslog.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_disable_ec2_metadata.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_scripts_user.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_salt_minion.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_rightscale_userdata.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_spacewalk.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_puppet.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_snappy.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_bootcmd.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_keys_to_console.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_mcollective.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_foo.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_power_state_change.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_set_hostname.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_ca_certs.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_landscape.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_ssh_authkey_fingerprints.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_scripts_per_boot.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_scripts_per_instance.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_chef.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_zypper_add_repo.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_mounts.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_debug.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_migrator.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_scripts_per_once.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_resolv_conf.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_resizefs.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_apt_pipelining.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_runcmd.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_apt_configure.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_scripts_vendor.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+copying cloudinit/config/cc_grub_dpkg.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/config
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/analyze
+copying cloudinit/analyze/dump.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/analyze
+copying cloudinit/analyze/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/analyze
+copying cloudinit/analyze/__main__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/analyze
+copying cloudinit/analyze/show.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/analyze
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/reporting
+copying cloudinit/reporting/events.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/reporting
+copying cloudinit/reporting/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/reporting
+copying cloudinit/reporting/handlers.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/reporting
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/handlers
+copying cloudinit/handlers/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/handlers
+copying cloudinit/handlers/upstart_job.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/handlers
+copying cloudinit/handlers/cloud_config.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/handlers
+copying cloudinit/handlers/boot_hook.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/handlers
+copying cloudinit/handlers/shell_script.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/handlers
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/mergers
+copying cloudinit/mergers/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/mergers
+copying cloudinit/mergers/m_list.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/mergers
+copying cloudinit/mergers/m_str.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/mergers
+copying cloudinit/mergers/m_dict.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/mergers
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/rhel_util.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/freebsd.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/ug_util.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/net_util.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/opensuse.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/fedora.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/sles.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/debian.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/ubuntu.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/centos.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/gentoo.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/rhel.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+copying cloudinit/distros/arch.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/eni.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/renderers.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/renderer.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/network_state.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/netplan.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/dhcp.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/cmdline.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/udev.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+copying cloudinit/net/sysconfig.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/net
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/filters
+copying cloudinit/filters/launch_index.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/filters
+copying cloudinit/filters/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/filters
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd
+copying cloudinit/cmd/status.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd
+copying cloudinit/cmd/main.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd
+copying cloudinit/cmd/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd
+copying cloudinit/cmd/clean.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers
+copying cloudinit/sources/helpers/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers
+copying cloudinit/sources/helpers/openstack.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers
+copying cloudinit/sources/helpers/digitalocean.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers
+copying cloudinit/sources/helpers/azure.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware
+copying cloudinit/sources/helpers/vmware/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/nic.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/ipv4_mode.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/guestcust_error.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/guestcust_event.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/nic_base.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_passwd.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/guestcust_state.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_namespace.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/boot_proto.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_nic.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/guestcust_util.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_source.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_custom_script.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_file.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/sources/helpers/vmware/imc
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/hostname.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/resolv_conf.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/networkmanager_conf.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/hosts.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/sys_conf.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/distros/parsers
+creating /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd/devel
+copying cloudinit/cmd/devel/__init__.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd/devel
+copying cloudinit/cmd/devel/parser.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd/devel
+copying cloudinit/cmd/devel/logs.py -> /root/work/cloud-init-18.1-5-g40e77380/.pybuild/pythonX.Y_3.4/build/cloudinit/cmd/devel
+running build_scripts
+creating build
+creating build/scripts-3.4
+copying tools/cloud-init-per -> build/scripts-3.4
+   debian/rules override_dh_auto_test
+make[1]: Entering directory '/root/work/cloud-init-18.1-5-g40e77380'
+http_proxy= make PYVER=python3 check
+make[2]: Entering directory '/root/work/cloud-init-18.1-5-g40e77380'
+nosetests3 -v tests/unittests cloudinit
+test_exception_warns (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_invalid_content (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_no_key_found (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_parse_cmdline_url_found (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_parse_cmdline_url_nokey_raises_keyerror (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_valid_content (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+Exceptions within C{handle_part} are caught and logged. ... ok
+C{handle_part} is called regardless of frequency if nofreq is always. ... ok
+C{handle_part} is not called if frequency is once. ... ok
+C{handle_part} is called without C{frequency} for ... ok
+C{handle_part} is called with C{frequency} for ... ok
+Attribute errors are logged. No handler added to C{pdata}. ... ok
+Module import errors are logged. No handler added to C{pdata}. ... ok
+Payload gets written to file and added to C{pdata}. ... ok
+write_file takes bytes if no omode. ... ok
+write_file with mode 400 works correctly. ... ok
+write_file can take a string with mode w. ... ok
+write_json output is readable json. ... ok
+test_upstart_frequency_no_out (tests.unittests.test_builtin_handlers.TestBuiltins) ... ok
+test_upstart_frequency_single (tests.unittests.test_builtin_handlers.TestBuiltins) ... ok
+All known subparsers are represented in the cloud-int help doc. ... ok
+The subcommand cloud-init analyze calls the correct subparser. ... ok
+The subcommand cloud-init clean calls the subparser. ... ok
+The subcommand cloud-init collect-logs calls the subparser. ... ok
+Subcommands from entry-point are properly parsed from sys.argv. ... ok
+The subcommand cloud-init devel calls the correct subparser. ... ok
+The subcommand 'dhclient-hook' calls dhclient_hook with args. ... ok
+The subcommand 'features' calls main_features with args. ... ok
+The subcommand 'init' calls status_wrapper passing init. ... ok
+The subcommand 'modules' calls status_wrapper passing modules. ... ok
+test_no_arguments_shows_error_message (tests.unittests.test_cli.TestCLI) ... ok
+test_no_arguments_shows_usage (tests.unittests.test_cli.TestCLI) ... ok
+The subcommand 'single' calls main_single with valid args. ... ok
+The subcommand cloud-init status calls the subparser. ... ok
+status_wrapper will error if a parameter combination is invalid. ... ok
+status_wrapper will error when the name parameter is not valid. ... ok
+When running in init-local mode, status_wrapper writes status.json. ... ok
+Validate that doc content is sane from known examples. ... ok
+The subcommand cloud-init schema calls the correct subparser. ... ok
+test_contains (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_getitem (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_iter (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_len (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_with_list_as_result (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_cloud_config_archive (tests.unittests.test_data.TestConsumeUserData) ... ok
+Test #include. ... ok
+Test #include with a bad URL. ... ok
+test_merging_cloud_config (tests.unittests.test_data.TestConsumeUserData) ... ok
+Mime type application/octet-stream is ignored but shows warning. ... ok
+Tests that individual message gzip encoding works. ... ok
+Mime message of type text/plain is ignored but shows warning. ... ok
+Mime type text/plain starting #!/bin/sh is treated as script. ... ok
+Mime message of type text/x-shellscript is treated as script. ... ok
+test_mixed_cloud_config (tests.unittests.test_data.TestConsumeUserData) ... ok
+Raw text starting #!/bin/sh is treated as script. ... ok
+test_simple_jsonp (tests.unittests.test_data.TestConsumeUserData) ... ok
+test_simple_jsonp_no_vendor_consumed (tests.unittests.test_data.TestConsumeUserData) ... ok
+test_simple_jsonp_vendor_and_user (tests.unittests.test_data.TestConsumeUserData) ... ok
+Raw text without magic is ignored but shows warning. ... ok
+test_vendor_user_yaml_cloud_config (tests.unittests.test_data.TestConsumeUserData) ... ok
+test_vendordata_script (tests.unittests.test_data.TestConsumeUserData) ... ok
+test_handle_headers (tests.unittests.test_data.TestConvertString) ... ok
+test_handles_binary_non_utf8_decodable (tests.unittests.test_data.TestConvertString) ... ok
+test_handles_binary_utf8_decodable (tests.unittests.test_data.TestConvertString) ... ok
+test_cmdline_overrides_confd_runtime_and_defaults (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_cmdline_overrides_defaults (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_conf_d_overrides_defaults (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_only_builtin_gets_builtin (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_order_precedence_is_builtin_system_runtime_cmdline (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_bytes_in_userdata (tests.unittests.test_data.TestUDProcess) ... ok
+test_compressed_in_userdata (tests.unittests.test_data.TestUDProcess) ... ok
+test_string_in_userdata (tests.unittests.test_data.TestUDProcess) ... ok
+test_parse_public_keys (tests.unittests.test_datasource.test_aliyun.TestAliYunDatasource) ... ok
+If is_aliyun returns false, then get_data should return False. ... ok
+test_with_mock_server (tests.unittests.test_datasource.test_aliyun.TestAliYunDatasource) ... ok
+Should return false on empty value returned. ... ok
+Should return false on an unrelated string. ... ok
+Should return true if the dmi product data has expected value. ... ok
+Test method get_cloud_type() for RHEVm systems. ... ok
+Test method get_cloud_type() for unknown systems. ... ok
+Test method get_cloud_type() for vSphere systems. ... ok
+Failure Test module get_data() forcing RHEV. ... ok
+Failure Test module get_data() forcing VSPHERE. ... ok
+Success Test module get_data() forcing RHEV. ... ok
+Failure Test module get_data() forcing unrecognized. ... ok
+Success Test module get_data() forcing VSPHERE. ... ok
+Test No cloud info file module get_data() forcing unrecognized. ... ok
+Test No cloud info file module get_data() forcing RHEV. ... ok
+Test No cloud info file module get_data() forcing VSPHERE. ... ok
+Test read_user_data_callback() with both files. ... ok
+Test read_user_data_callback() with only DC file. ... ok
+Test read_user_data_callback() with only non-DC file. ... ok
+Test read_user_data_callback() no files are found. ... ok
+Test user_data_rhevm() where modprobe fails. ... ok
+Test user_data_rhevm() where mount_cb fails. ... ok
+Test user_data_rhevm() with no modprobe command. ... ok
+Test user_data_rhevm() with no udevadm command. ... ok
+Test user_data_rhevm() where udevadm fails. ... ok
+Test user_data_vsphere() where mount_cb fails. ... ok
+Test user_data_vsphere() where mount_cb fails. ... ok
+test_bounce_skipped_on_ifupdown_absent (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_default_bounce_command_ifup_used_by_default (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_different_hostnames_performs_bounce (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_different_hostnames_sets_hostname (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_different_hostnames_sets_hostname_back (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_disabled_bounce_does_not_change_hostname (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_disabled_bounce_does_not_perform_bounce (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_environment_correct_for_bounce_command (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_failure_in_bounce_still_resets_host_name (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_force_performs_bounce_regardless (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_same_hostname_does_not_change_hostname (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_set_hostname_option_can_disable_bounce (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_set_hostname_option_can_disable_hostname_set (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_unchanged_hostname_does_not_perform_bounce (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_basic_seed_dir (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_cfg_has_no_fingerprint_has_value (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_cfg_has_pubkeys_fingerprint (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_cfg_has_pubkeys_value (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_default_ephemeral (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+Errors communicating with fabric should warn, but return True. ... ok
+test_fabric_data_included_in_metadata (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_find_freebsd_part_on_Azure (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_get_path_dev_freebsd_on_Azure (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_get_resource_disk (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_instance_id_from_dmidecode_used (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_instance_id_from_dmidecode_used_for_builtin (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+On FreeBSD, possible devs should show /dev/cd0. ... ok
+test_network_config (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_network_config_blacklist (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_no_datasource_expected (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+Report non-azure when DMI's chassis asset tag doesn't match. ... ok
+test_ovf_can_include_unicode (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_ovf_env_arrives_in_waagent_dir (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_password_given (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_password_redacted_in_ovf (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_provide_disk_aliases (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_sys_cfg_set_agent_command (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_user_cfg_set_agent_command (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_user_cfg_set_agent_command_plain (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_userdata_arrives (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_userdata_found (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_userdata_plain (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_username_used (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_waagent_d_has_0700_perms (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+The _reprovision method should call poll IMDS. ... ok
+The _should_reprovision method should return False ... ok
+The _should_reprovision method should return True if the sentinal ... ok
+The _should_reprovision method should return true with config ... ok
+The _poll_imds method should return the ovf_env.xml. ... ok
+The read_azure_ovf method should set the PreprovisionedVM ... ok
+The read_azure_ovf method should set the PreprovisionedVM ... ok
+The read_azure_ovf method should not set the ... ok
+DataSourceAzureNet must exist for old obj.pkl files ... ok
+A disk with no partitions can not be formatted. ... ok
+1 partition witih fs other than ntfs can not be formatted. ... ok
+1 mountable ntfs partition and no files can be formatted. ... ok
+1 mountable ntfs partition and only warn file can be formatted. ... ok
+1 mountable ntfs partition with many files can not be formatted. ... ok
+A symlink to a device with 1 ntfs partition can be formatted. ... ok
+A symlink to a device with 3 partitions can not be formatted. ... ok
+A disk with 3 partitions can not be formatted. ... ok
+2 partitions and 2nd not ntfs can not be formatted. ... ok
+2 partitions and empty ntfs fs on 2nd can be formatted. ... ok
+2 partitions and populated ntfs fs on 2nd can not be formatted. ... ok
+load_azure_ds_dir raises an error When ovf-env.xml doesn't exit. ... ok
+load_azure_ds_dir calls read_azure_ovf to parse the xml. ... ok
+test_invalid_xml_raises_non_azure_ds (tests.unittests.test_datasource.test_azure.TestReadAzureOvf) ... ok
+test_load_with_pubkeys (tests.unittests.test_datasource.test_azure.TestReadAzureOvf) ... ok
+test_non_secure_get (tests.unittests.test_datasource.test_azure_helper.TestAzureEndpointHttpClient) ... ok
+test_post (tests.unittests.test_datasource.test_azure_helper.TestAzureEndpointHttpClient) ... ok
+test_post_with_extra_headers (tests.unittests.test_datasource.test_azure_helper.TestAzureEndpointHttpClient) ... ok
+test_secure_get (tests.unittests.test_datasource.test_azure_helper.TestAzureEndpointHttpClient) ... ok
+test_hex_string (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+test_hex_string_with_single_character_part (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+test_packed_string (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+test_packed_string_containing_a_colon (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+test_packed_string_with_escaped_quote (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+Somewhat arbitrarily return the first address when multiple. ... ok
+No valid leases should return None. ... ok
+A single valid lease with 245 option should return it. ... ok
+A valid lease, but no option 245 should return None. ... ok
+test_from_dhcp_client (tests.unittests.test_datasource.test_azure_helper.TestFindEndpoint) ... ok
+test_latest_lease_used (tests.unittests.test_datasource.test_azure_helper.TestFindEndpoint) ... ok
+test_missing_file (tests.unittests.test_datasource.test_azure_helper.TestFindEndpoint) ... ok
+test_missing_special_azure_line (tests.unittests.test_datasource.test_azure_helper.TestFindEndpoint) ... ok
+test_data_from_shim_returned (tests.unittests.test_datasource.test_azure_helper.TestGetMetadataFromFabric) ... ok
+test_failure_in_registration_calls_clean_up (tests.unittests.test_datasource.test_azure_helper.TestGetMetadataFromFabric) ... ok
+test_success_calls_clean_up (tests.unittests.test_datasource.test_azure_helper.TestGetMetadataFromFabric) ... ok
+test_certificates_xml_parsed_and_fetched_correctly (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_container_id_parsed_correctly (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_incarnation_parsed_correctly (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_instance_id_parsed_correctly (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_missing_certificates_skips_http_get (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_clean_up (tests.unittests.test_datasource.test_azure_helper.TestOpenSSLManager) ... ok
+test_generate_certificate_uses_tmpdir (tests.unittests.test_datasource.test_azure_helper.TestOpenSSLManager) ... ok
+test_openssl_manager_creates_a_tmpdir (tests.unittests.test_datasource.test_azure_helper.TestOpenSSLManager) ... ok
+test_absent_certificates_produces_empty_public_keys (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_certificates_used_to_determine_public_keys (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_clean_up_can_be_called_at_any_time (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_clean_up_will_clean_up_openssl_manager_if_instantiated (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_correct_url_used_for_goalstate (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_correct_url_used_for_report_ready (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_failure_to_fetch_goalstate_bubbles_up (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_goal_state_values_used_for_report_ready (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_http_client_uses_certificate (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_encoded_user_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_get_hostname (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_get_instance_id (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_get_public_ssh_keys (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_lack_of_cloudinit_key_in_vendor_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_lack_of_vendor_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_metadata (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_user_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_vendor_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_get_datasource_list_returns_in_local (tests.unittests.test_datasource.test_cloudsigma.DsLoads) ... ok
+test_list_sources_finds_ds (tests.unittests.test_datasource.test_cloudsigma.DsLoads) ... ok
+test_bad_request_doesnt_stop_ds_from_working (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_empty_password_doesnt_create_config (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_password_not_saved_if_already_saved (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_password_not_saved_if_bad_request (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_password_not_saved_if_empty (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_password_sets_password (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_saved_password_doesnt_create_config (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_valid_response_means_password_marked_as_saved (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+only .lease or .leases file should be considered. ... ok
+files named dhclient-lease or dhclient-leases should be used. ... ok
+files named dhclient.lease or dhclient.leases should be used. ... ok
+If multiple files match, the newest written should be used. ... ok
+files started with dhclient6 should be skipped. ... ok
+test_expected_default_local_sources_found (tests.unittests.test_datasource.test_common.ExpectedDataSources) ... ok
+test_expected_default_network_sources_found (tests.unittests.test_datasource.test_common.ExpectedDataSources) ... ok
+test_expected_nondefault_network_sources_found (tests.unittests.test_datasource.test_common.ExpectedDataSources) ... ok
+test_dev_ec2_map (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+test_dev_ec2_remap (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+test_dev_os_map (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+test_dev_os_remap (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+Verify a dir is read as such. ... ok
+test_ec2_metadata (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+test_find_candidates (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+Verify that public-keys work in config-drive-v2. ... ok
+Verify that bad json in metadata raises BrokenConfigDriveDir. ... ok
+Verify that missing seed_dir raises NonConfigDriveDir. ... ok
+Verify that no metadata raises NonConfigDriveDir. ... ok
+Verify extra files do not affect datasource validity. ... ok
+test_bond_conversion (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_conversion_fills_names (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_conversion_with_route (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_conversion_with_tap (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_convert_raises_value_error_on_missing_name (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_convert_reads_system_prefers_name (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_mac_addrs_can_be_upper_case (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_vlan (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+Tests a bunch of input network json and checks the ... ok
+Verify that network_data is converted and present on ds object. ... ok
+Verify that network_data is present in ds in config-drive-v2. ... ok
+test_metadata (tests.unittests.test_datasource.test_digitalocean.TestDataSourceDigitalOcean) ... ok
+test_multiple_ssh_keys (tests.unittests.test_datasource.test_digitalocean.TestDataSourceDigitalOcean) ... ok
+test_returns_false_not_on_docean (tests.unittests.test_datasource.test_digitalocean.TestDataSourceDigitalOcean) ... ok
+test_convert_without_private (tests.unittests.test_datasource.test_digitalocean.TestNetworkConvert) ... ok
+test to make sure the eth0 ipv4 and ipv6 gateways are defined ... ok
+test_networking_defined (tests.unittests.test_datasource.test_digitalocean.TestNetworkConvert) ... ok
+test that the private interface is defined as eth1 ... ok
+test public ipv4 addressing ... ok
+test that the public interface is defined as eth0 ... ok
+test public ipv4 addressing ... ok
+test public ipv6 addressing ... ok
+Convert Ec2 Metadata calls get_interfaces_by_mac by default. ... ok
+Config dhcp4 on fallback_nic when there are no ipv4 addresses. ... ok
+Config both dhcp4 and dhcp6 when both vpc-ipv6 and ipv4 exists. ... ok
+Config dhcp4 when there are no public addresses in public-ipv4s. ... ok
+When dhcp6 is public and dhcp4 is set to local enable both. ... ok
+Config dhcp6 when ipv6s is in metadata for a mac. ... ok
+Any mac absent from metadata is skipped by network config. ... ok
+get_instance-id gets DataSourceEc2Local.identity if not present. ... ok
+Ec2Local returns True for valid platform data on non-BSD with dhcp. ... 

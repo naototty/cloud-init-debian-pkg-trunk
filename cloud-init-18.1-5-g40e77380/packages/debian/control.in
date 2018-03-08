@@ -1,0 +1,18 @@
+## template:basic
+Source: cloud-init
+Section: admin
+Priority: optional
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Build-Depends: ${build_depends}
+XS-Python-Version: all
+Standards-Version: 3.9.6
+
+Package: cloud-init
+Architecture: all
+Depends: ${misc:Depends},
+         ${${python}:Depends}
+Recommends: eatmydata, sudo, software-properties-common, gdisk
+XB-Python-Version: ${python:Versions}
+Description: Init scripts for cloud instances
+ Cloud instances need special scripts to run during initialisation
+ to retrieve and install ssh keys and to let the user run various scripts.

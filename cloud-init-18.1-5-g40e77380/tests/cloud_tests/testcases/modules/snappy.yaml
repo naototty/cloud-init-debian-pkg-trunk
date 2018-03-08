@@ -1,0 +1,15 @@
+#
+# Install snappy
+#
+required_features:
+  - snap
+cloud_config: |
+  #cloud-config
+  snappy:
+    system_snappy: auto
+collect_scripts:
+  snapd: |
+    #!/bin/bash
+    dpkg -s snapd
+
+# vi: ts=4 expandtab

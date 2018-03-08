@@ -1,0 +1,97 @@
+# Translation of cloud-init debconf templates to Polish.
+# Copyright (C) 2013
+# This file is distributed under the same license as the cloud-init package.
+#
+# Michał Kułach <michal.kulach@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: cloud-init\n"
+"Report-Msgid-Bugs-To: cloud-init@packages.debian.org\n"
+"POT-Creation-Date: 2013-06-26 06:56+0200\n"
+"PO-Revision-Date: 2013-06-27 20:35+0200\n"
+"Last-Translator: Michał Kułach <michal.kulach@gmail.com>\n"
+"Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#. Type: multiselect
+#. Choices
+#: ../cloud-init.templates:2001
+msgid "/var/lib/cloud/seed only"
+msgstr "tylko /var/lib/cloud/seed"
+
+#. Type: multiselect
+#. Choices
+#: ../cloud-init.templates:2001
+msgid "AltCloud Config Drive"
+msgstr "konfiguracja dysku AltCloud"
+
+#. Type: multiselect
+#. Choices
+#: ../cloud-init.templates:2001
+msgid "CloudStack metadata service"
+msgstr "metadane usługi CloudStack"
+
+#. Type: multiselect
+#. Choices
+#: ../cloud-init.templates:2001
+msgid "OpenStack Config Drive"
+msgstr "konfiguracja dysku OpenStack"
+
+#. Type: multiselect
+#. Choices
+#: ../cloud-init.templates:2001
+msgid "EC2 Metadata service"
+msgstr "metadane usługi EC2"
+
+#. Type: multiselect
+#. Choices
+#: ../cloud-init.templates:2001
+msgid "Ubuntu MAAS"
+msgstr "Ubuntu MAAS"
+
+#. Type: multiselect
+#. Choices
+#: ../cloud-init.templates:2001
+msgid "OVF Transports"
+msgstr "transporty OVF"
+
+#. Type: multiselect
+#. Choices
+#: ../cloud-init.templates:2001
+msgid "Failsafe datasource"
+msgstr "awaryjne źródło danych"
+
+#. Type: multiselect
+#. Description
+#: ../cloud-init.templates:2002
+msgid "Data sources to read from:"
+msgstr "Źródło danych do odczytu:"
+
+#. Type: multiselect
+#. Description
+#: ../cloud-init.templates:2002
+msgid ""
+"Cloud-init supports searching different \"Data Sources\" for information "
+"that it uses to configure a cloud instance."
+msgstr ""
+"W celu pozyskania informacji potrzebnych do skonfigurowania chmury program "
+"Cloud-init obsługuje różne źródła danych."
+
+#. Type: multiselect
+#. Description
+#: ../cloud-init.templates:2002
+msgid ""
+"Please note that \"EC2 Metadata service\" should be used only if the EC2 "
+"metadata service is present. Otherwise, it will trigger a very noticeable "
+"timeout on boot."
+msgstr ""
+"Proszę zauważyć, że \"metadane usługi EC2\" mogą być wybrane wyłącznie jeśli "
+"obecna jest usługa metadanych EC2. W przeciwnym razie rozruch systemu będzie "
+"znacząco spowolniony."
+

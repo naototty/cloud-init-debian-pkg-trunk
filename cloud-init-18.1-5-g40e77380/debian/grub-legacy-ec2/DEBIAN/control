@@ -1,0 +1,15 @@
+Package: grub-legacy-ec2
+Source: cloud-init
+Version: 18.1-5-g40e77380-0ubuntu1
+Architecture: all
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Installed-Size: 150
+Depends: debconf | cdebconf, ucf, util-linux, debconf (>= 0.5) | debconf-2.0
+Suggests: grub-legacy-doc
+Conflicts: grub
+Section: admin
+Priority: extra
+Description: Handles update-grub for ec2 instances
+ EC2 instances that use grub-legacy as a bootloader need a way to keep
+ /boot/grub/menu.lst up to date while not conflicting with grub-pc.
+ This package provides that.

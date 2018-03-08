@@ -1,0 +1,45 @@
+Format: 1.8
+Date: Thu, 01 Mar 2018 15:47:04 -0700
+Source: cloud-init
+Binary: cloud-init grub-legacy-ec2
+Architecture: source all
+Version: 18.1-5-g40e77380-0ubuntu1
+Distribution: bionic
+Urgency: medium
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Changed-By: Chad Smith <chad.smith@canonical.com>
+Description:
+ cloud-init - Init scripts for cloud instances
+ grub-legacy-ec2 - Handles update-grub for ec2 instances
+Changes:
+ cloud-init (18.1-5-g40e77380-0ubuntu1) bionic; urgency=medium
+ .
+   * New upstream snapshot.
+     - GCE: fix reading of user-data that is not base64 encoded. (LP: #1752711)
+     - doc: fix chef install from apt packages example in RTD.
+     - Implement puppet 4 support [Romanos Skiadas] (LP: #1446804)
+     - subp: Fix subp usage with non-ascii characters when no system locale.
+       (LP: #1751051)
+     - salt: configure grains in grains file rather than in minion config.
+       [Daniel Wallace]
+Checksums-Sha1:
+ 9d2a846803721eede295b5050f11f4c6736c3f31 1470 cloud-init_18.1-5-g40e77380-0ubuntu1.dsc
+ cff8b4bd3f7be7f8f9db10a44c565312ef3f38f6 834339 cloud-init_18.1-5-g40e77380.orig.tar.gz
+ 0cbb87d403c4202f8fe38afd2f0903a2bff1521e 68476 cloud-init_18.1-5-g40e77380-0ubuntu1.debian.tar.xz
+ 4294948fb2248d51ace731fc672f6eb6cb4a37c0 408924 cloud-init_18.1-5-g40e77380-0ubuntu1_all.deb
+ 465c6c02959502719660e54d88cf244f1a508cea 6858 cloud-init_18.1-5-g40e77380-0ubuntu1_amd64.buildinfo
+ d041507523195e9875859a99509c71427e3ae720 90892 grub-legacy-ec2_18.1-5-g40e77380-0ubuntu1_all.deb
+Checksums-Sha256:
+ 2cae6758244da65e8d89577870227ec4428770d3fdee00fffac3410d9d0f8285 1470 cloud-init_18.1-5-g40e77380-0ubuntu1.dsc
+ 0fcfa8173807e0af513d3ab124201cd7f11957c6ae615370ffa77a8825273bc7 834339 cloud-init_18.1-5-g40e77380.orig.tar.gz
+ c0447c6938a8ba2f88d73e453a95fb4e1f8a0536db78b2fd782f93523f601796 68476 cloud-init_18.1-5-g40e77380-0ubuntu1.debian.tar.xz
+ ecbeb841889674964491a27cc9b2c101c55a09c8b48b58cb1f4680334c1ba74d 408924 cloud-init_18.1-5-g40e77380-0ubuntu1_all.deb
+ 2514ceddf871162bfb5510117890c072485f259957cbf51639237949c82461f8 6858 cloud-init_18.1-5-g40e77380-0ubuntu1_amd64.buildinfo
+ f64a77e773d7015ded6020b852848fd5db00803415996bd335a617d52803f07e 90892 grub-legacy-ec2_18.1-5-g40e77380-0ubuntu1_all.deb
+Files:
+ 0a2791654a54fec50525332850e82a7a 1470 admin extra cloud-init_18.1-5-g40e77380-0ubuntu1.dsc
+ 1556bf2468eb30330500a0f9e8fef759 834339 admin extra cloud-init_18.1-5-g40e77380.orig.tar.gz
+ 037e69c0786e4055183fbd131a3537af 68476 admin extra cloud-init_18.1-5-g40e77380-0ubuntu1.debian.tar.xz
+ 1582e63aceed1221e8f0b747902ba354 408924 admin extra cloud-init_18.1-5-g40e77380-0ubuntu1_all.deb
+ 052ace9f48db7bb3a40cb38c6864a66f 6858 admin extra cloud-init_18.1-5-g40e77380-0ubuntu1_amd64.buildinfo
+ c295fc5b6a82bf3e1a3596c4797ce6fc 90892 admin extra grub-legacy-ec2_18.1-5-g40e77380-0ubuntu1_all.deb

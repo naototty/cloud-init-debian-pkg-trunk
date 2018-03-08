@@ -1,0 +1,58 @@
+Source: cloud-init
+Maintainer: Charles Plessy <plessy@debian.org>
+Uploaders: Miguel Landaeta <miguel@miguel.cc>,
+           Julien Danjou <acid@debian.org>,
+           Thomas Goirand <zigo@debian.org>
+Section: admin
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               iproute2,
+               po-debconf,
+               pyflakes,
+               pylint,
+               python,
+               python-boto (>= 2.3),
+               python-cheetah,
+               python-configobj,
+               python-httpretty,
+               python-jsonpatch,
+               python-mocker,
+               python-nose,
+               python-oauth,
+               python-serial,
+               python-setuptools,
+               python-requests,
+               python-yaml
+Standards-Version: 3.9.5
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/cloud-init.git;a=summary
+Vcs-Git: git://anonscm.debian.org/collab-maint/cloud-init.git
+Homepage: https://launchpad.net/cloud-init
+
+Package: cloud-init
+Architecture: all
+Depends: lsb-base (>= 4.1+Debian3),
+         ifupdown,
+         procps,
+         python,
+         python (>= 2.7) | python-argparse,
+         python-boto (>= 2.3),
+         python-cheetah,
+         python-configobj,
+         python-jsonpatch,
+         python-oauth,
+         python-prettytable,
+         python-requests,
+         python-serial,
+         python-software-properties,
+         python-yaml,
+         ${misc:Depends},
+         ${python:Depends}
+Description: initialization system for infrastructure cloud instances
+ Cloud-init provides a framework and tool to configure and customize virtual
+ machine instances for Infrastructure-as-a-Service (IaaS) clouds platforms. It
+ can for example set a default locale and hostname, generate SSH private host
+ keys, install SSH public keys for logging into a default account, set up
+ ephemeral mount points, and run user-provided scripts.
+ .
+ Various methods are supported for passing data to the instance at launch
+ time, including the standard interfaces of multiple platforms.

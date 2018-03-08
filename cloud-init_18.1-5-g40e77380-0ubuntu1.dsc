@@ -10,7 +10,7 @@ Maintainer: Scott Moser <smoser@ubuntu.com>
 Standards-Version: 3.9.8
 Vcs-Browser: https://git.launchpad.net/cloud-init/?h=ubuntu/devel
 Vcs-Git: git://git.launchpad.net/cloud-init -b ubuntu/devel
-Build-Depends: debhelper (>= 9), dh-python, dh-systemd, iproute2, pep8, po-debconf, pyflakes, python3, python3-configobj, python3-httpretty, python3-jinja2, python3-jsonpatch, python3-jsonschema, python3-mock, python3-nose, python3-oauthlib, python3-pep8, python3-pyflakes | pyflakes (<< 1.1.0-2), python3-requests, python3-serial, python3-setuptools, python3-six, python3-unittest2, python3-yaml
+Build-Depends: debhelper (>= 9), dh-python, dh-systemd, iproute2, pep8, po-debconf, pyflakes, python3, python3-configobj, python3-httpretty, python3-jinja2, python3-jsonpatch, python3-jsonschema, python3-mock, python3-nose, python3-oauthlib, python3-pep8, python3-pyflakes | pyflakes (<< 1.1.0-2), python3-requests, python3-serial, python3-setuptools, python3-six, python3-yaml, autopoint, curl, libasprintf-dev, libatm1, libgettextpo-dev, libglib2.0-data, libmail-sendmail-perl, libxtables10, lynx-cur, shared-mime-info, wget, xdg-user-dirs, xml-core, krb5-locales, libsasl2-modules
 Package-List:
  cloud-init deb admin extra arch=all
  grub-legacy-ec2 deb admin extra arch=all
