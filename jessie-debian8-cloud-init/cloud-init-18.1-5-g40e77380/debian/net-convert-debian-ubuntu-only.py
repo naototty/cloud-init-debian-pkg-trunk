@@ -11,7 +11,7 @@ from cloudinit.sources.helpers import openstack
 from cloudinit.net import eni
 from cloudinit.net import netplan
 from cloudinit.net import network_state
-from cloudinit.net import sysconfig
+## from cloudinit.net import sysconfig
 
 
 def main():
@@ -30,8 +30,9 @@ def main():
                         action='append',
                         help="interface name to mac mapping")
     parser.add_argument("--output-kind", "-ok",
-                        choices=['eni', 'netplan', 'sysconfig'],
+                        choices=['eni', 'netplan'],
                         required=True)
+##                         choices=['eni', 'netplan', 'sysconfig'],
     args = parser.parse_args()
 
     if not os.path.isdir(args.directory):
@@ -71,8 +72,8 @@ def main():
         r_cls = eni.Renderer
     elif args.output_kind == "netplan":
         r_cls = netplan.Renderer
-    else:
-        r_cls = sysconfig.Renderer
+    ##else:
+    ##    r_cls = sysconfig.Renderer
 
     r = r_cls()
     r.render_network_state(network_state=ns, target=args.directory)

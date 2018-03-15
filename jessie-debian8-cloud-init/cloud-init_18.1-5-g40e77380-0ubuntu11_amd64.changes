@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 07 Mar 2018 15:47:04 -0700
+Source: cloud-init
+Binary: cloud-init grub-legacy-ec2
+Architecture: all
+Version: 18.1-5-g40e77380-0ubuntu11
+Distribution: xenial
+Urgency: medium
+Maintainer: Scott Moser <smoser@ubuntu.com>,
+           Charles Plessy <plessy@debian.org>
+Changed-By: Naoto Gohko <naoto-gohko@gmo.jp>
+Description:
+ cloud-init - initialization system for infrastructure cloud instances
+ grub-legacy-ec2 - Handles update-grub for ec2 instances
+Changes:
+ cloud-init (18.1-5-g40e77380-0ubuntu11) xenial; urgency=medium
+ .
+     - add tools cli on /usr/bin/net-convert.py
+     - porting from bionic(18.04) to xenial(16.04)
+Checksums-Sha1:
+ 0d2976b510b995b7ccda94b0b1fd3f6707554c71 382704 cloud-init_18.1-5-g40e77380-0ubuntu11_all.deb
+ 50c612636c9112856feb2b0484a4cc8031db7b5f 64744 grub-legacy-ec2_18.1-5-g40e77380-0ubuntu11_all.deb
+Checksums-Sha256:
+ 370bf4db7594aaa01283db2f72579f604f3acd5f805e56f1541bfa8232e30fee 382704 cloud-init_18.1-5-g40e77380-0ubuntu11_all.deb
+ 8370261ace33c20ffc1d280a78c823c23862da00bcb9a6293b96db58fc1bf796 64744 grub-legacy-ec2_18.1-5-g40e77380-0ubuntu11_all.deb
+Files:
+ 14546ebe1aa6add1c7ddb2c0b6357f23 382704 admin optional cloud-init_18.1-5-g40e77380-0ubuntu11_all.deb
+ 3f394d633870c3ad124db0d650cde15b 64744 admin optional grub-legacy-ec2_18.1-5-g40e77380-0ubuntu11_all.deb

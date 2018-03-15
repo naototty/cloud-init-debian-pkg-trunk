@@ -1,0 +1,1979 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: source package cloud-init
+dpkg-buildpackage: source version 18.1-5-g40e77380-0ubuntu12
+dpkg-buildpackage: source distribution debian8.x
+dpkg-buildpackage: source changed by Naoto Gohko <naoto-gohko@gmo.jp>
+ dpkg-source --before-build cloud-init-18.1-5-g40e77380
+dpkg-buildpackage: host architecture amd64
+dpkg-source: info: using options from cloud-init-18.1-5-g40e77380/debian/source/options: --extend-diff-ignore=\.pyc$
+dpkg-source: info: applying fix-path-to-blkid-binary.patch
+dpkg-source: info: applying disable-rhel-set-hostname-test.patch
+ fakeroot debian/rules clean
+dh clean --with python2 --buildsystem=python_distutils
+   dh_testdir -O--buildsystem=python_distutils
+   dh_auto_clean -O--buildsystem=python_distutils
+	python setup.py clean -a
+running clean
+removing 'build/lib.linux-x86_64-2.7' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+removing 'build/scripts-2.7' (and everything under it)
+removing 'build'
+	find . -name \*.pyc -exec rm {} \+
+   dh_clean -O--buildsystem=python_distutils
+ debian/rules build
+dh build --with python2 --buildsystem=python_distutils
+   dh_testdir -O--buildsystem=python_distutils
+   dh_update_autotools_config -O--buildsystem=python_distutils
+   dh_auto_configure -O--buildsystem=python_distutils
+   dh_auto_build -O--buildsystem=python_distutils
+	python setup.py build --force
+running build
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/type_utils.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/url_helper.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/stages.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/settings.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/netinfo.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/dhclient_hook.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/ec2_utils.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/patcher.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/temp_utils.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/cs_utils.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/atomic_helper.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/cloud.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/importer.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/apport.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/log.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/registry.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/util.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/serial.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/templater.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/simpletable.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/version.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/signal_handler.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/ssh_util.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/safeyaml.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/helpers.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/user_data.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/gpg.py -> build/lib.linux-x86_64-2.7/cloudinit
+copying cloudinit/warnings.py -> build/lib.linux-x86_64-2.7/cloudinit
+creating build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceDigitalOcean.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceOpenStack.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceEc2.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceNone.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceCloudSigma.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceSmartOS.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceScaleway.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceAltCloud.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceOVF.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceMAAS.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceAliYun.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceOpenNebula.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceConfigDrive.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceNoCloud.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceCloudStack.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceGCE.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceAzure.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+copying cloudinit/sources/DataSourceBigstep.py -> build/lib.linux-x86_64-2.7/cloudinit/sources
+creating build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_ssh.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_timezone.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_yum_add_repo.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_update_etc_hosts.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_fan.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_byobu.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_final_message.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_phone_home.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_locale.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_lxd.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_set_passwords.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_package_update_upgrade_install.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/schema.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_ntp.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_ssh_import_id.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_emit_upstart.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_update_hostname.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_users_groups.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_rh_subscription.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_growpart.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_write_files.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_seed_random.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_snap_config.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_disk_setup.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_rsyslog.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_disable_ec2_metadata.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_scripts_user.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_salt_minion.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_rightscale_userdata.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_spacewalk.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_puppet.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_snappy.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_bootcmd.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_keys_to_console.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_mcollective.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_foo.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_power_state_change.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_set_hostname.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_ca_certs.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_landscape.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_ssh_authkey_fingerprints.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_scripts_per_boot.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_scripts_per_instance.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_chef.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_zypper_add_repo.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_mounts.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_debug.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_migrator.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_scripts_per_once.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_resolv_conf.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_resizefs.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_apt_pipelining.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_runcmd.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_apt_configure.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_scripts_vendor.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+copying cloudinit/config/cc_grub_dpkg.py -> build/lib.linux-x86_64-2.7/cloudinit/config
+creating build/lib.linux-x86_64-2.7/cloudinit/analyze
+copying cloudinit/analyze/dump.py -> build/lib.linux-x86_64-2.7/cloudinit/analyze
+copying cloudinit/analyze/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/analyze
+copying cloudinit/analyze/__main__.py -> build/lib.linux-x86_64-2.7/cloudinit/analyze
+copying cloudinit/analyze/show.py -> build/lib.linux-x86_64-2.7/cloudinit/analyze
+creating build/lib.linux-x86_64-2.7/cloudinit/reporting
+copying cloudinit/reporting/events.py -> build/lib.linux-x86_64-2.7/cloudinit/reporting
+copying cloudinit/reporting/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/reporting
+copying cloudinit/reporting/handlers.py -> build/lib.linux-x86_64-2.7/cloudinit/reporting
+creating build/lib.linux-x86_64-2.7/cloudinit/handlers
+copying cloudinit/handlers/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/handlers
+copying cloudinit/handlers/upstart_job.py -> build/lib.linux-x86_64-2.7/cloudinit/handlers
+copying cloudinit/handlers/cloud_config.py -> build/lib.linux-x86_64-2.7/cloudinit/handlers
+copying cloudinit/handlers/boot_hook.py -> build/lib.linux-x86_64-2.7/cloudinit/handlers
+copying cloudinit/handlers/shell_script.py -> build/lib.linux-x86_64-2.7/cloudinit/handlers
+creating build/lib.linux-x86_64-2.7/cloudinit/mergers
+copying cloudinit/mergers/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/mergers
+copying cloudinit/mergers/m_list.py -> build/lib.linux-x86_64-2.7/cloudinit/mergers
+copying cloudinit/mergers/m_str.py -> build/lib.linux-x86_64-2.7/cloudinit/mergers
+copying cloudinit/mergers/m_dict.py -> build/lib.linux-x86_64-2.7/cloudinit/mergers
+creating build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/rhel_util.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/freebsd.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/ug_util.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/net_util.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/opensuse.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/fedora.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/sles.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/debian.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/ubuntu.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/centos.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/gentoo.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/rhel.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+copying cloudinit/distros/arch.py -> build/lib.linux-x86_64-2.7/cloudinit/distros
+creating build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/eni.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/renderers.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/renderer.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/network_state.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/netplan.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/dhcp.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/cmdline.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/udev.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+copying cloudinit/net/sysconfig.py -> build/lib.linux-x86_64-2.7/cloudinit/net
+creating build/lib.linux-x86_64-2.7/cloudinit/filters
+copying cloudinit/filters/launch_index.py -> build/lib.linux-x86_64-2.7/cloudinit/filters
+copying cloudinit/filters/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/filters
+creating build/lib.linux-x86_64-2.7/cloudinit/cmd
+copying cloudinit/cmd/status.py -> build/lib.linux-x86_64-2.7/cloudinit/cmd
+copying cloudinit/cmd/main.py -> build/lib.linux-x86_64-2.7/cloudinit/cmd
+copying cloudinit/cmd/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/cmd
+copying cloudinit/cmd/clean.py -> build/lib.linux-x86_64-2.7/cloudinit/cmd
+creating build/lib.linux-x86_64-2.7/cloudinit/sources/helpers
+copying cloudinit/sources/helpers/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers
+copying cloudinit/sources/helpers/openstack.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers
+copying cloudinit/sources/helpers/digitalocean.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers
+copying cloudinit/sources/helpers/azure.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers
+creating build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware
+copying cloudinit/sources/helpers/vmware/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware
+creating build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/nic.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/ipv4_mode.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/guestcust_error.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/guestcust_event.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/nic_base.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_passwd.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/guestcust_state.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_namespace.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/boot_proto.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_nic.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/guestcust_util.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_source.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_custom_script.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+copying cloudinit/sources/helpers/vmware/imc/config_file.py -> build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc
+creating build/lib.linux-x86_64-2.7/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/hostname.py -> build/lib.linux-x86_64-2.7/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/resolv_conf.py -> build/lib.linux-x86_64-2.7/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/networkmanager_conf.py -> build/lib.linux-x86_64-2.7/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/hosts.py -> build/lib.linux-x86_64-2.7/cloudinit/distros/parsers
+copying cloudinit/distros/parsers/sys_conf.py -> build/lib.linux-x86_64-2.7/cloudinit/distros/parsers
+creating build/lib.linux-x86_64-2.7/cloudinit/cmd/devel
+copying cloudinit/cmd/devel/__init__.py -> build/lib.linux-x86_64-2.7/cloudinit/cmd/devel
+copying cloudinit/cmd/devel/parser.py -> build/lib.linux-x86_64-2.7/cloudinit/cmd/devel
+copying cloudinit/cmd/devel/logs.py -> build/lib.linux-x86_64-2.7/cloudinit/cmd/devel
+running build_scripts
+creating build/scripts-2.7
+copying tools/cloud-init-per -> build/scripts-2.7
+   debian/rules override_dh_auto_test
+make[1]: Entering directory '/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380'
+dh_auto_test
+/usr/bin/make test
+make[2]: Entering directory '/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380'
+nosetests3 -v tests/unittests cloudinit
+test_exception_warns (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_invalid_content (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_no_key_found (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_parse_cmdline_url_found (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_parse_cmdline_url_nokey_raises_keyerror (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+test_valid_content (tests.unittests.test__init__.TestCmdlineUrl) ... ok
+Exceptions within C{handle_part} are caught and logged. ... ok
+C{handle_part} is called regardless of frequency if nofreq is always. ... ok
+C{handle_part} is not called if frequency is once. ... ok
+C{handle_part} is called without C{frequency} for ... ok
+C{handle_part} is called with C{frequency} for ... ok
+Attribute errors are logged. No handler added to C{pdata}. ... ok
+Module import errors are logged. No handler added to C{pdata}. ... ok
+Payload gets written to file and added to C{pdata}. ... ok
+write_file takes bytes if no omode. ... ok
+write_file with mode 400 works correctly. ... ok
+write_file can take a string with mode w. ... ok
+write_json output is readable json. ... ok
+test_upstart_frequency_no_out (tests.unittests.test_builtin_handlers.TestBuiltins) ... ok
+test_upstart_frequency_single (tests.unittests.test_builtin_handlers.TestBuiltins) ... ok
+All known subparsers are represented in the cloud-int help doc. ... ok
+The subcommand cloud-init analyze calls the correct subparser. ... ok
+The subcommand cloud-init clean calls the subparser. ... ok
+The subcommand cloud-init collect-logs calls the subparser. ... ok
+Subcommands from entry-point are properly parsed from sys.argv. ... ok
+The subcommand cloud-init devel calls the correct subparser. ... ok
+The subcommand 'dhclient-hook' calls dhclient_hook with args. ... ok
+The subcommand 'features' calls main_features with args. ... ok
+The subcommand 'init' calls status_wrapper passing init. ... ok
+The subcommand 'modules' calls status_wrapper passing modules. ... ok
+test_no_arguments_shows_error_message (tests.unittests.test_cli.TestCLI) ... ok
+test_no_arguments_shows_usage (tests.unittests.test_cli.TestCLI) ... ok
+The subcommand 'single' calls main_single with valid args. ... ok
+The subcommand cloud-init status calls the subparser. ... ok
+status_wrapper will error if a parameter combination is invalid. ... ok
+status_wrapper will error when the name parameter is not valid. ... ok
+When running in init-local mode, status_wrapper writes status.json. ... ok
+Validate that doc content is sane from known examples. ... ok
+The subcommand cloud-init schema calls the correct subparser. ... ok
+test_contains (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_getitem (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_iter (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_len (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_with_list_as_result (tests.unittests.test_cs_util.CepkoResultTests) ... SKIP: This test is completely useless
+test_cloud_config_archive (tests.unittests.test_data.TestConsumeUserData) ... ok
+Test #include. ... ok
+Test #include with a bad URL. ... ok
+test_merging_cloud_config (tests.unittests.test_data.TestConsumeUserData) ... ok
+Mime type application/octet-stream is ignored but shows warning. ... ok
+Tests that individual message gzip encoding works. ... ok
+Mime message of type text/plain is ignored but shows warning. ... ok
+Mime type text/plain starting #!/bin/sh is treated as script. ... ok
+Mime message of type text/x-shellscript is treated as script. ... ok
+test_mixed_cloud_config (tests.unittests.test_data.TestConsumeUserData) ... ok
+Raw text starting #!/bin/sh is treated as script. ... ok
+test_simple_jsonp (tests.unittests.test_data.TestConsumeUserData) ... ok
+test_simple_jsonp_no_vendor_consumed (tests.unittests.test_data.TestConsumeUserData) ... ok
+test_simple_jsonp_vendor_and_user (tests.unittests.test_data.TestConsumeUserData) ... ok
+Raw text without magic is ignored but shows warning. ... ok
+test_vendor_user_yaml_cloud_config (tests.unittests.test_data.TestConsumeUserData) ... ok
+test_vendordata_script (tests.unittests.test_data.TestConsumeUserData) ... ok
+test_handle_headers (tests.unittests.test_data.TestConvertString) ... ok
+test_handles_binary_non_utf8_decodable (tests.unittests.test_data.TestConvertString) ... ok
+test_handles_binary_utf8_decodable (tests.unittests.test_data.TestConvertString) ... ok
+test_cmdline_overrides_confd_runtime_and_defaults (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_cmdline_overrides_defaults (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_conf_d_overrides_defaults (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_only_builtin_gets_builtin (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_order_precedence_is_builtin_system_runtime_cmdline (tests.unittests.test_data.TestFetchBaseConfig) ... ok
+test_bytes_in_userdata (tests.unittests.test_data.TestUDProcess) ... ok
+test_compressed_in_userdata (tests.unittests.test_data.TestUDProcess) ... ok
+test_string_in_userdata (tests.unittests.test_data.TestUDProcess) ... ok
+test_parse_public_keys (tests.unittests.test_datasource.test_aliyun.TestAliYunDatasource) ... ok
+If is_aliyun returns false, then get_data should return False. ... ok
+test_with_mock_server (tests.unittests.test_datasource.test_aliyun.TestAliYunDatasource) ... ok
+Should return false on empty value returned. ... ok
+Should return false on an unrelated string. ... ok
+Should return true if the dmi product data has expected value. ... ok
+Test method get_cloud_type() for RHEVm systems. ... ok
+Test method get_cloud_type() for unknown systems. ... ok
+Test method get_cloud_type() for vSphere systems. ... ok
+Failure Test module get_data() forcing RHEV. ... ok
+Failure Test module get_data() forcing VSPHERE. ... ok
+Success Test module get_data() forcing RHEV. ... ok
+Failure Test module get_data() forcing unrecognized. ... ok
+Success Test module get_data() forcing VSPHERE. ... ok
+Test No cloud info file module get_data() forcing unrecognized. ... ok
+Test No cloud info file module get_data() forcing RHEV. ... ok
+Test No cloud info file module get_data() forcing VSPHERE. ... ok
+Test read_user_data_callback() with both files. ... ok
+Test read_user_data_callback() with only DC file. ... ok
+Test read_user_data_callback() with only non-DC file. ... ok
+Test read_user_data_callback() no files are found. ... ok
+Test user_data_rhevm() where modprobe fails. ... ok
+Test user_data_rhevm() where mount_cb fails. ... ok
+Test user_data_rhevm() with no modprobe command. ... ok
+Test user_data_rhevm() with no udevadm command. ... ok
+Test user_data_rhevm() where udevadm fails. ... ok
+Test user_data_vsphere() where mount_cb fails. ... ok
+Test user_data_vsphere() where mount_cb fails. ... ok
+test_bounce_skipped_on_ifupdown_absent (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_default_bounce_command_ifup_used_by_default (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_different_hostnames_performs_bounce (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_different_hostnames_sets_hostname (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_different_hostnames_sets_hostname_back (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_disabled_bounce_does_not_change_hostname (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_disabled_bounce_does_not_perform_bounce (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_environment_correct_for_bounce_command (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_failure_in_bounce_still_resets_host_name (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_force_performs_bounce_regardless (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_same_hostname_does_not_change_hostname (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_set_hostname_option_can_disable_bounce (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_set_hostname_option_can_disable_hostname_set (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_unchanged_hostname_does_not_perform_bounce (tests.unittests.test_datasource.test_azure.TestAzureBounce) ... ok
+test_basic_seed_dir (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_cfg_has_no_fingerprint_has_value (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_cfg_has_pubkeys_fingerprint (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_cfg_has_pubkeys_value (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_default_ephemeral (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+Errors communicating with fabric should warn, but return True. ... ok
+test_fabric_data_included_in_metadata (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_find_freebsd_part_on_Azure (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_get_path_dev_freebsd_on_Azure (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_get_resource_disk (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_instance_id_from_dmidecode_used (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_instance_id_from_dmidecode_used_for_builtin (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+On FreeBSD, possible devs should show /dev/cd0. ... ok
+test_network_config (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_network_config_blacklist (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_no_datasource_expected (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+Report non-azure when DMI's chassis asset tag doesn't match. ... ok
+test_ovf_can_include_unicode (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_ovf_env_arrives_in_waagent_dir (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_password_given (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_password_redacted_in_ovf (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_provide_disk_aliases (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_sys_cfg_set_agent_command (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_user_cfg_set_agent_command (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_user_cfg_set_agent_command_plain (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_userdata_arrives (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_userdata_found (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_userdata_plain (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_username_used (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+test_waagent_d_has_0700_perms (tests.unittests.test_datasource.test_azure.TestAzureDataSource) ... ok
+The _reprovision method should call poll IMDS. ... ok
+The _should_reprovision method should return False ... ok
+The _should_reprovision method should return True if the sentinal ... ok
+The _should_reprovision method should return true with config ... ok
+The _poll_imds method should return the ovf_env.xml. ... ok
+The read_azure_ovf method should set the PreprovisionedVM ... ok
+The read_azure_ovf method should set the PreprovisionedVM ... ok
+The read_azure_ovf method should not set the ... ok
+DataSourceAzureNet must exist for old obj.pkl files ... ok
+A disk with no partitions can not be formatted. ... ok
+1 partition witih fs other than ntfs can not be formatted. ... ok
+1 mountable ntfs partition and no files can be formatted. ... ok
+1 mountable ntfs partition and only warn file can be formatted. ... ok
+1 mountable ntfs partition with many files can not be formatted. ... ok
+A symlink to a device with 1 ntfs partition can be formatted. ... ok
+A symlink to a device with 3 partitions can not be formatted. ... ok
+A disk with 3 partitions can not be formatted. ... ok
+2 partitions and 2nd not ntfs can not be formatted. ... ok
+2 partitions and empty ntfs fs on 2nd can be formatted. ... ok
+2 partitions and populated ntfs fs on 2nd can not be formatted. ... ok
+load_azure_ds_dir raises an error When ovf-env.xml doesn't exit. ... ok
+load_azure_ds_dir calls read_azure_ovf to parse the xml. ... ok
+test_invalid_xml_raises_non_azure_ds (tests.unittests.test_datasource.test_azure.TestReadAzureOvf) ... ok
+test_load_with_pubkeys (tests.unittests.test_datasource.test_azure.TestReadAzureOvf) ... ok
+test_non_secure_get (tests.unittests.test_datasource.test_azure_helper.TestAzureEndpointHttpClient) ... ok
+test_post (tests.unittests.test_datasource.test_azure_helper.TestAzureEndpointHttpClient) ... ok
+test_post_with_extra_headers (tests.unittests.test_datasource.test_azure_helper.TestAzureEndpointHttpClient) ... ok
+test_secure_get (tests.unittests.test_datasource.test_azure_helper.TestAzureEndpointHttpClient) ... ok
+test_hex_string (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+test_hex_string_with_single_character_part (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+test_packed_string (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+test_packed_string_containing_a_colon (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+test_packed_string_with_escaped_quote (tests.unittests.test_datasource.test_azure_helper.TestExtractIpAddressFromLeaseValue) ... ok
+Somewhat arbitrarily return the first address when multiple. ... ok
+No valid leases should return None. ... ok
+A single valid lease with 245 option should return it. ... ok
+A valid lease, but no option 245 should return None. ... ok
+test_from_dhcp_client (tests.unittests.test_datasource.test_azure_helper.TestFindEndpoint) ... ok
+test_latest_lease_used (tests.unittests.test_datasource.test_azure_helper.TestFindEndpoint) ... ok
+test_missing_file (tests.unittests.test_datasource.test_azure_helper.TestFindEndpoint) ... ok
+test_missing_special_azure_line (tests.unittests.test_datasource.test_azure_helper.TestFindEndpoint) ... ok
+test_data_from_shim_returned (tests.unittests.test_datasource.test_azure_helper.TestGetMetadataFromFabric) ... ok
+test_failure_in_registration_calls_clean_up (tests.unittests.test_datasource.test_azure_helper.TestGetMetadataFromFabric) ... ok
+test_success_calls_clean_up (tests.unittests.test_datasource.test_azure_helper.TestGetMetadataFromFabric) ... ok
+test_certificates_xml_parsed_and_fetched_correctly (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_container_id_parsed_correctly (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_incarnation_parsed_correctly (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_instance_id_parsed_correctly (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_missing_certificates_skips_http_get (tests.unittests.test_datasource.test_azure_helper.TestGoalStateParsing) ... ok
+test_clean_up (tests.unittests.test_datasource.test_azure_helper.TestOpenSSLManager) ... ok
+test_generate_certificate_uses_tmpdir (tests.unittests.test_datasource.test_azure_helper.TestOpenSSLManager) ... ok
+test_openssl_manager_creates_a_tmpdir (tests.unittests.test_datasource.test_azure_helper.TestOpenSSLManager) ... ok
+test_absent_certificates_produces_empty_public_keys (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_certificates_used_to_determine_public_keys (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_clean_up_can_be_called_at_any_time (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_clean_up_will_clean_up_openssl_manager_if_instantiated (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_correct_url_used_for_goalstate (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_correct_url_used_for_report_ready (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_failure_to_fetch_goalstate_bubbles_up (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_goal_state_values_used_for_report_ready (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_http_client_uses_certificate (tests.unittests.test_datasource.test_azure_helper.TestWALinuxAgentShim) ... ok
+test_encoded_user_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_get_hostname (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_get_instance_id (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_get_public_ssh_keys (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_lack_of_cloudinit_key_in_vendor_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_lack_of_vendor_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_metadata (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_user_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_vendor_data (tests.unittests.test_datasource.test_cloudsigma.DataSourceCloudSigmaTest) ... ok
+test_get_datasource_list_returns_in_local (tests.unittests.test_datasource.test_cloudsigma.DsLoads) ... ok
+test_list_sources_finds_ds (tests.unittests.test_datasource.test_cloudsigma.DsLoads) ... ok
+test_bad_request_doesnt_stop_ds_from_working (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_empty_password_doesnt_create_config (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_password_not_saved_if_already_saved (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_password_not_saved_if_bad_request (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_password_not_saved_if_empty (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_password_sets_password (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_saved_password_doesnt_create_config (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+test_valid_response_means_password_marked_as_saved (tests.unittests.test_datasource.test_cloudstack.TestCloudStackPasswordFetching) ... ok
+only .lease or .leases file should be considered. ... ok
+files named dhclient-lease or dhclient-leases should be used. ... ok
+files named dhclient.lease or dhclient.leases should be used. ... ok
+If multiple files match, the newest written should be used. ... ok
+files started with dhclient6 should be skipped. ... ok
+test_expected_default_local_sources_found (tests.unittests.test_datasource.test_common.ExpectedDataSources) ... ok
+test_expected_default_network_sources_found (tests.unittests.test_datasource.test_common.ExpectedDataSources) ... ok
+test_expected_nondefault_network_sources_found (tests.unittests.test_datasource.test_common.ExpectedDataSources) ... ok
+test_dev_ec2_map (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+test_dev_ec2_remap (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+test_dev_os_map (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+test_dev_os_remap (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+Verify a dir is read as such. ... ok
+test_ec2_metadata (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+test_find_candidates (tests.unittests.test_datasource.test_configdrive.TestConfigDriveDataSource) ... ok
+Verify that public-keys work in config-drive-v2. ... ok
+Verify that bad json in metadata raises BrokenConfigDriveDir. ... ok
+Verify that missing seed_dir raises NonConfigDriveDir. ... ok
+Verify that no metadata raises NonConfigDriveDir. ... ok
+Verify extra files do not affect datasource validity. ... ok
+test_bond_conversion (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_conversion_fills_names (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_conversion_with_route (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_conversion_with_tap (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_convert_raises_value_error_on_missing_name (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_convert_reads_system_prefers_name (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_mac_addrs_can_be_upper_case (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+test_vlan (tests.unittests.test_datasource.test_configdrive.TestConvertNetworkData) ... ok
+Tests a bunch of input network json and checks the ... ok
+Verify that network_data is converted and present on ds object. ... ok
+Verify that network_data is present in ds in config-drive-v2. ... ok
+test_metadata (tests.unittests.test_datasource.test_digitalocean.TestDataSourceDigitalOcean) ... ok
+test_multiple_ssh_keys (tests.unittests.test_datasource.test_digitalocean.TestDataSourceDigitalOcean) ... ok
+test_returns_false_not_on_docean (tests.unittests.test_datasource.test_digitalocean.TestDataSourceDigitalOcean) ... ok
+test_convert_without_private (tests.unittests.test_datasource.test_digitalocean.TestNetworkConvert) ... ok
+test to make sure the eth0 ipv4 and ipv6 gateways are defined ... ok
+test_networking_defined (tests.unittests.test_datasource.test_digitalocean.TestNetworkConvert) ... ok
+test that the private interface is defined as eth1 ... ok
+test public ipv4 addressing ... ok
+test that the public interface is defined as eth0 ... ok
+test public ipv4 addressing ... ok
+test public ipv6 addressing ... ok
+Convert Ec2 Metadata calls get_interfaces_by_mac by default. ... ok
+Config dhcp4 on fallback_nic when there are no ipv4 addresses. ... ok
+Config both dhcp4 and dhcp6 when both vpc-ipv6 and ipv4 exists. ... ok
+Config dhcp4 when there are no public addresses in public-ipv4s. ... ok
+When dhcp6 is public and dhcp4 is set to local enable both. ... ok
+Config dhcp6 when ipv6s is in metadata for a mac. ... ok
+Any mac absent from metadata is skipped by network config. ... ok
+get_instance-id gets DataSourceEc2Local.identity if not present. ... ok
+DataSourceEc2Local returns False on BSD. ... ok
+DataSourceEc2Local returns False when platform is not AWS. ... ok
+network_config property is cached in DataSourceEc2. ... ok
+Unknown platform data with strict_id true should return False. ... ok
+test_block_project_ssh_keys_override (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_cloudinit_ssh_keys (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_connection (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_default_user_ssh_keys (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_get_data_returns_false_if_not_on_gce (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_has_expired (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_instance_ssh_keys_override (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_metadata (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+user-data is base64 encoded if user-data-encoding is 'base64'. ... ok
+test_metadata_partial (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_missing_required_keys_return_false (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_no_ssh_keys_metadata (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_only_last_part_of_zone_used_for_availability_zone (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+test_parse_public_keys_non_ascii (tests.unittests.test_datasource.test_gce.TestDataSourceGCE) ... ok
+check that user-data is read. ... ok
+Test v1 id generated as expected working behavior from config. ... ok
+Test v1 id ignores unused entries in config. ... ok
+Valid config as expected. ... ok
+Only relevant fields are passed through. ... ok
+Verify that invalid seed_dir raises MAASSeedDirMalformed. ... ok
+Verify that missing seed_dir raises MAASSeedDirNone. ... ok
+Verify that empty seed_dir raises MAASSeedDirNone. ... ok
+Verify a valid seeddir is read as such. ... ok
+Verify extra files do not affect seed_dir validity. ... ok
+Verify that valid seed_url is read as such. ... ok
+test_seed_url_vendor_data_dict (tests.unittests.test_datasource.test_maas.TestMAASDataSource) ... ok
+test_fs_label (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_metadata_network_config (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_metadata_network_config_over_interfaces (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_metadata_network_interfaces (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_no_datasource_expected (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_nocloud_no_vendordata (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_nocloud_seed_dir (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_nocloud_seed_with_vendordata (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_seed_in_config (tests.unittests.test_datasource.test_nocloud.TestNoCloudDataSource) ... ok
+test_parse_cmdline_data_none (tests.unittests.test_datasource.test_nocloud.TestParseCommandLineData) ... ok
+test_parse_cmdline_data_valid (tests.unittests.test_datasource.test_nocloud.TestParseCommandLineData) ... ok
+test_context_parser (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_find_candidates (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_get_data (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_get_data_broken_contextdisk (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_get_data_invalid_identity (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_get_data_non_contextdisk (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_hostname (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_network_interfaces (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_seed_dir_broken_context (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_seed_dir_empty1_context (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_seed_dir_empty2_context (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_seed_dir_non_contextdisk (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_ssh_key (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_user_data_base64_encoding (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_user_data_encoding_required_for_decode (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_user_data_plain (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaDataSource) ... ok
+test_eth0 (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaNetwork) ... ok
+test_eth0_override (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaNetwork) ... ok
+test_lo (tests.unittests.test_datasource.test_opennebula.TestOpenNebulaNetwork) ... ok
+Test rendering multiple nics with names that differ from context. ... ok
+test_no_seconds (tests.unittests.test_datasource.test_opennebula.TestParseShellConfig) ... ok
+test_bad_datasource_meta (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_bad_metadata (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_bad_uuid (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_datasource (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_disabled_datasource (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_metadata_invalid (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_no_datasource (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_no_ec2 (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_successful (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_userdata_empty (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_vendordata_empty (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_vendordata_invalid (tests.unittests.test_datasource.test_openstack.TestOpenStackDataSource) ... ok
+test_vd_load_dict_ci_dict (tests.unittests.test_datasource.test_openstack.TestVendorDataLoading) ... ok
+test_vd_load_dict_ci_list (tests.unittests.test_datasource.test_openstack.TestVendorDataLoading) ... ok
+test_vd_load_dict_ci_string (tests.unittests.test_datasource.test_openstack.TestVendorDataLoading) ... ok
+test_vd_load_dict_no_ci (tests.unittests.test_datasource.test_openstack.TestVendorDataLoading) ... ok
+test_vd_load_list (tests.unittests.test_datasource.test_openstack.TestVendorDataLoading) ... ok
+test_vd_load_none (tests.unittests.test_datasource.test_openstack.TestVendorDataLoading) ... ok
+test_vd_load_string (tests.unittests.test_datasource.test_openstack.TestVendorDataLoading) ... ok
+When dmi for system-product-name is None, get_data returns False. ... ok
+When vmware customization is disabled via sys_cfg log a message. ... ok
+When cloud-init workflow for vmware is enabled via sys_cfg log a ... ok
+Return False when markerid provided is None. ... ok
+Test creation of marker files. ... ok
+Return False when markerid file path does not exist, ... ok
+test_with_b64_userdata (tests.unittests.test_datasource.test_ovf.TestReadOvfEnv) ... ok
+test_with_no_userdata (tests.unittests.test_datasource.test_ovf.TestReadOvfEnv) ... ok
+test_with_non_b64_userdata (tests.unittests.test_datasource.test_ovf.TestReadOvfEnv) ... ok
+Check we call get_ovf_env from on matching mounted devices ... ok
+Check we dont regex match on basename of the device ... ok
+Check we call get_ovf_env ignoring non iso9660 ... ok
+Test maybe_cdrom_device is false on /dev[/.*]/* paths ... ok
+Test maybe_cdrom_device raises ValueError on non-string types ... ok
+Test maybe_cdrom_device returns False for none/empty input ... ok
+Test maybe_cdrom_device is false on /dev/hd[a-z][0-9]+ paths ... ok
+Test maybe_cdrom_device normalizes paths ... ok
+Test maybe_cdrom_device returns true on xvd* ... ok
+Check we call mount_cb on blockdevs with iso9660 only ... ok
+Check we call mount_cb on blockdevs with iso9660 and match regex ... ok
+Check we call mount_cb on blockdevs with require_iso=False ... ok
+Check we don't call mount_cb if nothing matches ... ok
+get_data() returns metadata, but no user data nor vendor data. ... ok
+get_data() returns metadata, user data and vendor data. ... ok
+get_data() is rate limited two times by the metadata API when fetching ... ok
+test_not_on_scaleway (tests.unittests.test_datasource.test_scaleway.TestOnScaleway) ... ok
+"scaleway" in /proc/cmdline. ... ok
+dmidecode returns "Scaleway". ... ok
+/var/run/scaleway exists. ... ok
+test_get_metadata_base64_encodes_argument (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_calculates_length_correctly (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_checksums_correctly (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_line_starts_with_v2 (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_reads_a_line (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_returns_None_if_value_not_found (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_returns_valid_value (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_throws_exception_for_incorrect_crc (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_throws_exception_for_incorrect_length (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_throws_exception_for_request_id_mismatch (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_uses_appropriate_request_id (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_uses_get_command (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_uses_random_number_for_request_id (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_writes_a_single_line (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_get_metadata_writes_bytes (tests.unittests.test_datasource.test_smartos.TestJoyentMetadataClient) ... ok
+test_convert_simple (tests.unittests.test_datasource.test_smartos.TestNetworkConversion) ... ok
+test_convert_simple_alt (tests.unittests.test_datasource.test_smartos.TestNetworkConversion) ... ok
+test_convert_simple_both_ipv4_ipv6 (tests.unittests.test_datasource.test_smartos.TestNetworkConversion) ... ok
+test_convert_simple_dhcp (tests.unittests.test_datasource.test_smartos.TestNetworkConversion) ... ok
+test_convert_simple_multi_ip (tests.unittests.test_datasource.test_smartos.TestNetworkConversion) ... ok
+test_convert_simple_multi_ipv6 (tests.unittests.test_datasource.test_smartos.TestNetworkConversion) ... ok
+test_convert_with_dns (tests.unittests.test_datasource.test_smartos.TestNetworkConversion) ... ok
+test_gateways_not_on_all_nics (tests.unittests.test_datasource.test_smartos.TestNetworkConversion) ... ok
+test_default_ephemeral (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_default_vendor_data (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_disable_iptables_flag (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_hostname (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_hostname_b64 (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_motd_sys_info (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_no_base64 (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_override_disk_aliases (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_root_keys (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+Test that the SmartOS requirement that plain text scripts ... ok
+test_scripts_shebanged (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_sdc_nics (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_sdc_scripts (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_userdata (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+User-data in the SmartOS world is supposed to be written to a file ... ok
+test_uuid (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_vendor_data_not_default (tests.unittests.test_datasource.test_smartos.TestSmartOSDataSource) ... ok
+test_get_distro (tests.unittests.test_distros.test_arch.TestArch) ... ok
+Just the most basic static config. ... ok
+test_basic (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+test_create_groups_with_whitespace_string (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+test_explicit_no_home_false (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+test_group_added (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+test_no_home (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+test_only_new_group_added (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+test_set_password (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+test_system_user (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+test_unlocked (tests.unittests.test_distros.test_create_users.TestCreateUser) ... ok
+locale as None or "" is invalid and should raise ValueError. ... ok
+If locale is set to C.UTF8, do not attempt to call locale-gen ... ok
+If system has defined locale, no re-run is expected. ... ok
+If system has different locale, locale-gen should be called. ... ok
+If system has no locale file, locale-gen should be called. ... ok
+If key is LC_ALL and system has only LANG, rerun is expected. ... ok
+If system has unset locale, locale-gen should be called. ... ok
+test_arch_package_mirror_info_known (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+for an unknown arch, we should get back that with arch 'default'. ... ok
+Test rhel distro returns NotImplementedError exception ... ok
+Test ubuntu distro returns locale set to C.UTF-8 ... ok
+test_get_package_mirror_info_az_ec2 (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_get_package_mirror_info_az_non_ec2 (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_get_package_mirror_info_none (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_sudoers_ensure_append (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_sudoers_ensure_new (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_sudoers_ensure_rules (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_sudoers_ensure_rules_list (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_systemd_in_use (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_systemd_not_in_use (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_systemd_symlink (tests.unittests.test_distros.test_generic.TestGenericDistro) ... ok
+test_adjust_hostname (tests.unittests.test_distros.test_hostname.TestHostnameHelper) ... ok
+test_no_adjust_hostname (tests.unittests.test_distros.test_hostname.TestHostnameHelper) ... ok
+test_parse_same (tests.unittests.test_distros.test_hostname.TestHostnameHelper) ... ok
+test_add (tests.unittests.test_distros.test_hosts.TestHostsHelper) ... ok
+test_del (tests.unittests.test_distros.test_hosts.TestHostsHelper) ... ok
+test_parse (tests.unittests.test_distros.test_hosts.TestHostsHelper) ... ok
+test_apply_network_config_eni_ub (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_apply_network_config_fallback (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_apply_network_config_ipv6_rh (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_apply_network_config_rh (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_apply_network_config_v1_to_netplan_ub (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_apply_network_config_v2_passthrough_ub (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_generate_fallback_config_freebsd (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_get_ip_nic_freebsd (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_simple_write_freebsd (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+Opensuse network rendering writes appropriate sysconfg files. ... ok
+test_simple_write_rh (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_simple_write_ub (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_write_ipv6_rhel (tests.unittests.test_distros.test_netconfig.TestNetCfgDistro) ... ok
+test_get_distro (tests.unittests.test_distros.test_opensuse.TestopenSUSE) ... ok
+test_local_domain (tests.unittests.test_distros.test_resolv.TestResolvHelper) ... ok
+test_nameservers (tests.unittests.test_distros.test_resolv.TestResolvHelper) ... ok
+test_parse_same (tests.unittests.test_distros.test_resolv.TestResolvHelper) ... ok
+test_search_domains (tests.unittests.test_distros.test_resolv.TestResolvHelper) ... ok
+test_write_works (tests.unittests.test_distros.test_resolv.TestResolvHelper) ... ok
+test_get_distro (tests.unittests.test_distros.test_sles.TestSLES) ... ok
+test_parse_add_new (tests.unittests.test_distros.test_sysconfig.TestSysConfHelper) ... ok
+test_parse_adjust (tests.unittests.test_distros.test_sysconfig.TestSysConfHelper) ... ok
+test_parse_empty (tests.unittests.test_distros.test_sysconfig.TestSysConfHelper) ... ok
+test_parse_no_adjust_shell (tests.unittests.test_distros.test_sysconfig.TestSysConfHelper) ... ok
+test_parse_no_change (tests.unittests.test_distros.test_sysconfig.TestSysConfHelper) ... ok
+test_parse_shell_vars (tests.unittests.test_distros.test_sysconfig.TestSysConfHelper) ... ok
+test_add_user_on_snappy_system (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_basic_groups (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_create_snap_user (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_create_snap_user_known (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_csv_groups (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_group_dict (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_member_groups (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_more_groups (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_dict (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_dict_default (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_dict_default_additional (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_dict_extract (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_dict_trans (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_old_user (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_simple (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_simple_csv (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_simple_dict (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+test_users_simple_dict_no (tests.unittests.test_distros.test_user_data_normalize.TestUGNormalize) ... ok
+Test that Aliyun cloud is identified by product id. ... ok
+Even if all other factors identified Ec2, AliYun should be used. ... ok
+EC2: hvm instances use dmi serial and uuid starting with 'ec2'. ... ok
+EC2: sys/hypervisor/uuid starts with ec2. ... ok
+Azure datasource is detected from DMI chassis-asset-tag ... ok
+Azure datasource is detected due to presence of a seed file. ... ok
+EC2: product_serial ends with 'brightbox.com' ... ok
+ConfigDrive datasource has a disk with LABEL=config-2. ... ok
+ConfigDrive datasource has a disk with LABEL=CONFIG-2. ... ok
+When datasource_list already contains None, None is not added. ... ok
+NoCloud is found with iso9660 filesystem on non-cdrom disk. ... ok
+On Intel, openstack must be identified. ... ok
+OVF is identified found when ovf/ovf-env.xml seed file exists. ... ok
+OVF datasource won't be found as false positive on Azure. ... ok
+OVF identifies not found when detect_virt returns "none". ... ok
+GCE identifies itself with product_name. ... ok
+Older gce compute instances must be identified by serial. ... ok
+Nocloud seed directory. ... ok
+Nocloud seed directory ubuntu core writable ... ok
+On non-Intel, openstack without dmi info is maybe. ... ok
+OVF is identified by well-known iso9660 labels. ... ok
+OVF is identified when iso9660 cdrom path contains ovf schema. ... ok
+OVF is identified when open-vm-tools installed in /usr/lib64. ... ok
+OVF is identified when vmware customization is enabled. ... ok
+explicit policy: disabled in config file should cause not found. ... ok
+A Builtin policy of 'disabled' should return not found. ... ok
+If config has a single entry in datasource_list, that is used. ... ok
+_print_info reports an array of discovered variables to stderr. ... ok
+test_metadata_fetch_bdm (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+test_metadata_fetch_key (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+test_metadata_fetch_no_keys (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+test_metadata_fetch_with_2_keys (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+test_metadata_no_security_credentials (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+test_userdata_fetch (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+test_userdata_fetch_fail_not_found (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+test_userdata_fetch_fail_server_dead (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+test_userdata_fetch_fail_server_not_found (tests.unittests.test_ec2_util.TestEc2Util) ... ok
+testConfigEmailIndex (tests.unittests.test_filters.test_launch_index.TestLaunchFilter) ... ok
+testHeaderEmailIndex (tests.unittests.test_filters.test_launch_index.TestLaunchFilter) ... ok
+testIndexes (tests.unittests.test_filters.test_launch_index.TestLaunchFilter) ... ok
+testMultiEmailIndex (tests.unittests.test_filters.test_launch_index.TestLaunchFilter) ... ok
+testNoneIndex (tests.unittests.test_filters.test_launch_index.TestLaunchFilter) ... ok
+test_apt_all_proxy_written (tests.unittests.test_handler.test_handler_apt_conf_v1.TestAptProxyConfig) ... ok
+test_apt_http_proxy_written (tests.unittests.test_handler.test_handler_apt_conf_v1.TestAptProxyConfig) ... ok
+test_apt_proxy_written (tests.unittests.test_handler.test_handler_apt_conf_v1.TestAptProxyConfig) ... ok
+test_config_deleted (tests.unittests.test_handler.test_handler_apt_conf_v1.TestAptProxyConfig) ... ok
+test_config_replaced (tests.unittests.test_handler.test_handler_apt_conf_v1.TestAptProxyConfig) ... ok
+test_config_written (tests.unittests.test_handler.test_handler_apt_conf_v1.TestAptProxyConfig) ... ok
+test_proxy_deleted (tests.unittests.test_handler.test_handler_apt_conf_v1.TestAptProxyConfig) ... ok
+test_proxy_replaced (tests.unittests.test_handler.test_handler_apt_conf_v1.TestAptProxyConfig) ... ok
+test_convert_with_apt_mirror (tests.unittests.test_handler.test_handler_apt_conf_v1.TestConversion) ... ok
+test_convert_with_apt_mirror_as_empty_string (tests.unittests.test_handler.test_handler_apt_conf_v1.TestConversion) ... ok
+test_no_old_content (tests.unittests.test_handler.test_handler_apt_conf_v1.TestConversion) ... ok
+Test rendering of a source.list from template for debian ... ok
+Test rendering of a source.list from template for ubuntu ... ok
+Test rendering from a custom source.list template ... ok
+Test rendering of a source.list from template for debian ... ok
+Test rendering of a source.list from template for ubuntu ... ok
+test_apt_v3_source_list_centos - without custom sources or parms ... ok
+test_apt_v3_source_list_debian - without custom sources or parms ... ok
+test_apt_v3_source_list_psm - Test specifying prim+sec mirrors ... ok
+test_apt_v3_source_list_ubuntu - without custom sources or parms ... ok
+test_apt_v3_source_list_ubuntu_snappy - without custom sources or ... ok
+test_apt_v3_srcl_custom - Test rendering a custom source template ... ok
+Test deb source string, overwrite mirror and filename ... ok
+Test deb source string, overwrite mirror and filename (dict) ... ok
+Test Fix three deb source string with filenames (dict) ... ok
+Test Fix three deb source string without filenames (dict) ... ok
+Test Fix three deb source string with filenames ... ok
+Test specification of a source + key with filename being set ... ok
+Test specification of a source + key without filename being set ... ok
+Test specification of a source + keyid with filename being set ... ok
+Test specification of a source + keyid without filename being set ... ok
+test_apt_src_keyid_real - Test keyid including key add ... ok
+Test 3x specification of a source + keyid with filename being set ... ok
+Test specification of a keyid without source ... ok
+Test specifying key without source ... ok
+test_apt_src_longkeyid_ks_real - Test long keyid from other ks ... ok
+test_apt_src_longkeyid_real - Test long keyid including key add ... ok
+Test adding a ppa ... ok
+Test adding three ppa's ... ok
+Test Autoreplacement of MIRROR and RELEASE in source specs ... ok
+Test triple Autoreplacement in source specs (dict) ... ok
+Test Autoreplacement of MIRROR and RELEASE in source specs nofile ... ok
+Test triple Autoreplacement of MIRROR and RELEASE in source specs ... ok
+Test the conversion of old to new format ... ok
+Test the conversion of old to new format with collisions ... ok
+test_convert_to_new_format_dict_collision (tests.unittests.test_handler.test_handler_apt_source_v1.TestAptSourceConfig) ... ok
+test_disable_suites - disable_suites with many configurations ... ok
+test_apt_v3_get_def_mir_non_intel_no_arch (tests.unittests.test_handler.test_handler_apt_source_v3.TestAptSourceConfig) ... ok
+test_apt_v3_get_default_mirrors_non_intel_with_arch (tests.unittests.test_handler.test_handler_apt_source_v3.TestAptSourceConfig) ... ok
+test_apt_v3_list_rename - Test find mirror and apt list renaming ... ok
+test_apt_v3_list_rename_non_slash (tests.unittests.test_handler.test_handler_apt_source_v3.TestAptSourceConfig) ... ok
+test_apt_v3_mirror - Test defining a mirror ... ok
+test_apt_v3_mirror_arches - Test arches selection of mirror ... ok
+test_apt_v3_mirror_arches - Test falling back to default arch ... ok
+test_apt_v3_mirror_arches - Test arches fallback to sys default ... ok
+test_apt_v3_mirror_default - Test without defining a mirror ... ok
+test_apt_v3_mirror_search - Test searching mirrors in a list ... ok
+test_apt_v3_mirror_search_dns - Test searching dns patterns ... ok
+test_apt_v3_mirror_search_many3 - Test both mirrors specs at once ... ok
+test_apt_v3_proxy - Test apt_*proxy configuration ... ok
+test_apt_v3_src_basic - Test fix deb source string ... ok
+test_apt_v3_src_basic_tri - Test multiple fix deb source strings ... ok
+test_apt_v3_src_key - Test source + key ... ok
+test_apt_v3_src_keyid - Test source + keyid with filename ... ok
+test_apt_v3_src_keyid_keyserver - Test custom keyserver ... ok
+test_apt_v3_src_keyid_real - Test keyid including key add ... ok
+test_apt_v3_src_keyid_tri - Test multiple src+key+filen writes ... ok
+test_apt_v3_src_keyidonly - Test keyid without source ... ok
+test_apt_v3_src_keyonly - Test key without source ... ok
+test_apt_v3_src_longkeyid_ks_real Test long keyid from other ks ... ok
+test_apt_v3_src_longkeyid_real Test long keyid including key add ... ok
+test_apt_v3_src_ppa - Test specification of a ppa ... ok
+test_apt_v3_src_ppa_tri - Test specification of multiple ppa's ... ok
+test_apt_v3_src_replace - Test replacement of MIRROR & RELEASE ... ok
+test_apt_v3_src_replace_fn - Test filename overwritten in dict ... ok
+test_apt_v3_src_replace_tri - Test multiple replace/overwrites ... ok
+test_apt_v3_url_resolvable - Test resolving urls ... ok
+test_disable_suites_blank_lines - ensure blank lines allowed ... ok
+test_dpkg_reconfigure_does_reconfigure (tests.unittests.test_handler.test_handler_apt_source_v3.TestDebconfSelections) ... ok
+test_dpkg_reconfigure_not_done_if_no_cleaners (tests.unittests.test_handler.test_handler_apt_source_v3.TestDebconfSelections) ... ok
+test_dpkg_reconfigure_not_done_on_no_data (tests.unittests.test_handler.test_handler_apt_source_v3.TestDebconfSelections) ... ok
+test_no_set_sel_if_none_to_set (tests.unittests.test_handler.test_handler_apt_source_v3.TestDebconfSelections) ... ok
+test_reconfigure_if_intersection (tests.unittests.test_handler.test_handler_apt_source_v3.TestDebconfSelections) ... ok
+test_reconfigure_if_no_intersection (tests.unittests.test_handler.test_handler_apt_source_v3.TestDebconfSelections) ... ok
+test_set_sel_call_has_expected_input (tests.unittests.test_handler.test_handler_apt_source_v3.TestDebconfSelections) ... ok
+Valid schema runs a bootcmd script with INSTANCE_ID in the env. ... ok
+Commands which can't be converted to shell will raise errors. ... ok
+When a valid script generates an error, that error is raised. ... ok
+Schema validation warns of non-array or string bootcmd items. ... ok
+Schema validation warns of non-array type for bootcmd key. ... ok
+When the provided config doesn't contain bootcmd, skip it. ... ok
+Test adding multiple certificates to the trusted CAs. ... ok
+Test that no certificate are written if not provided. ... ok
+Test adding a single certificate to the trusted CAs ... ok
+Test adding a single certificate to the trusted CAs ... ok
+Test remove_defaults is not called when config value is False. ... ok
+Test that no certificate are written if 'trusted' list is empty. ... ok
+Test that multiple certs get passed to add_ca_certs. ... ok
+Test remove_defaults is not called when config value is False. ... ok
+Test that no certificates are written if the 'trusted' key is not ... ok
+Test remove_defaults works as expected. ... ok
+Test that a single cert gets passed to add_ca_certs. ... ok
+Test that nothing is done if no ca-certs configuration is provided. ... ok
+test_commands (tests.unittests.test_handler.test_handler_ca_certs.TestRemoveDefaultCaCerts) ... ok
+test_commands (tests.unittests.test_handler.test_handler_ca_certs.TestUpdateCaCerts) ... ok
+test basic config looks sane ... ok
+test_firstboot_json (tests.unittests.test_handler.test_handler_chef.TestChef) ... ok
+test_no_config (tests.unittests.test_handler.test_handler_chef.TestChef) ... ok
+test_template_deletes (tests.unittests.test_handler.test_handler_chef.TestChef) ... ok
+test_validation_cert_and_validation_key (tests.unittests.test_handler.test_handler_chef.TestChef) ... ok
+test_validation_cert_with_system (tests.unittests.test_handler.test_handler_chef.TestChef) ... ok
+install_chef_from_omnibus provides version arg to OMNIBUS_URL. ... ok
+install_chef_from_omnibus retries OMNIBUS_URL upon failure. ... ok
+install_chef_from_omnibus runs downloaded OMNIBUS_URL as script. ... ok
+test_debug_no_write (tests.unittests.test_handler.test_handler_debug.TestDebug) ... ok
+test_debug_write (tests.unittests.test_handler.test_handler_debug.TestDebug) ... ok
+test_size_for_1024_byte_sectors (tests.unittests.test_handler.test_handler_disk_setup.TestGetMbrHddSize) ... ok
+test_size_for_2048_byte_sectors (tests.unittests.test_handler.test_handler_disk_setup.TestGetMbrHddSize) ... ok
+test_size_for_4096_byte_sectors (tests.unittests.test_handler.test_handler_disk_setup.TestGetMbrHddSize) ... ok
+test_size_for_512_byte_sectors (tests.unittests.test_handler.test_handler_disk_setup.TestGetMbrHddSize) ... ok
+test_half_and_half (tests.unittests.test_handler.test_handler_disk_setup.TestGetPartitionMbrLayout) ... ok
+test_single_partition_using_boolean (tests.unittests.test_handler.test_handler_disk_setup.TestGetPartitionMbrLayout) ... ok
+test_single_partition_using_list (tests.unittests.test_handler.test_handler_disk_setup.TestGetPartitionMbrLayout) ... ok
+test_thirds_with_different_partition_type (tests.unittests.test_handler.test_handler_disk_setup.TestGetPartitionMbrLayout) ... ok
+test_multiple_child_nodes_returns_true (tests.unittests.test_handler.test_handler_disk_setup.TestIsDiskUsed) ... ok
+test_one_child_nodes_and_no_fs_returns_false (tests.unittests.test_handler.test_handler_disk_setup.TestIsDiskUsed) ... ok
+test_valid_filesystem_returns_true (tests.unittests.test_handler.test_handler_disk_setup.TestIsDiskUsed) ... ok
+mkfs observes extra_opts and overwrite settings when cmd is not ... ok
+mkfs honors cmd and logs warnings when extra_opts or overwrite are ... ok
+test_dotted_devname (tests.unittests.test_handler.test_handler_disk_setup.TestUpdateFsSetupDevices) ... ok
+test_dotted_devname_populates_partition (tests.unittests.test_handler.test_handler_disk_setup.TestUpdateFsSetupDevices) ... ok
+test_regression_1634678 (tests.unittests.test_handler.test_handler_disk_setup.TestUpdateFsSetupDevices) ... ok
+test_write_etc_hosts_suse_localhost (tests.unittests.test_handler.test_handler_etc_hosts.TestHostsFile) ... ok
+test_write_etc_hosts_suse_template (tests.unittests.test_handler.test_handler_etc_hosts.TestHostsFile) ... ok
+test_handle_with_no_growpart_entry (tests.unittests.test_handler.test_handler_growpart.TestConfig) ... ok
+test_mode_auto_prefers_growpart (tests.unittests.test_handler.test_handler_growpart.TestConfig) ... ok
+test_no_resizers_auto_is_fine (tests.unittests.test_handler.test_handler_growpart.TestConfig) ... ok
+test_no_resizers_mode_growpart_is_exception (tests.unittests.test_handler.test_handler_growpart.TestConfig) ... ok
+test_mode_off (tests.unittests.test_handler.test_handler_growpart.TestDisabled) ... ok
+test_simple_devices (tests.unittests.test_handler.test_handler_growpart.TestResize) ... ok
+Raise an error when landscape configuraiton option is invalid. ... ok
+Write landscape client.conf and install landscape-client. ... ok
+handler restarts lansdscape-client after install. ... ok
+Empty landscape cloud-config section does no work. ... ok
+Merge and write options from LSC_CLIENT_CFG_FILE with defaults. ... ok
+Merge and write options from cloud-config options with defaults. ... ok
+Test cc_locale gets en_US.UTF-8 from distro get_locale fallback ... ok
+Test cc_locale writes updates conf if different than default ... ok
+test_set_locale_sles (tests.unittests.test_handler.test_handler_locale.TestLocale) ... ok
+test_set_locale_sles_default (tests.unittests.test_handler.test_handler_locale.TestLocale) ... ok
+test_lxd_cmd_existing (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_cmd_new_full (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_cmd_new_partial (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_cmd_none (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_debconf_existing (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_debconf_new_full (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_debconf_new_partial (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_debconf_none (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_init (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_lxd_install (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_no_init_does_nothing (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_no_lxd_does_nothing (tests.unittests.test_handler.test_handler_lxd.TestLxd) ... ok
+test_basic_config (tests.unittests.test_handler.test_handler_mcollective.TestConfig) ... ok
+test_certificats_written (tests.unittests.test_handler.test_handler_mcollective.TestConfig) ... ok
+test_existing_config_is_saved (tests.unittests.test_handler.test_handler_mcollective.TestConfig) ... ok
+test_existing_updated (tests.unittests.test_handler.test_handler_mcollective.TestConfig) ... ok
+test_mcollective_install (tests.unittests.test_handler.test_handler_mcollective.TestHandler) ... ok
+test_existent_disk_but_missing_partition_returns_none (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_existent_disk_name_returns_full_path (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_existent_full_disk_path_is_returned (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_existent_meta_disk_is_returned (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_existent_meta_partition_is_returned (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_existent_meta_partition_with_p_is_returned (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_first_partition_returned_if_existent_disk_is_partitioned (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_missing_device_returns_none (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_missing_sys_returns_none (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_nth_partition_returned_if_requested (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+test_transformer_returning_none_returns_none (tests.unittests.test_handler.test_handler_mounts.TestSanitizeDevname) ... ok
+When no ntp section is defined handler logs a warning and noops. ... ok
+Test ntp handler renders ubuntu ntp.conf template. ... ok
+Test ntp handler renders timesycnd.conf template on snappy. ... ok
+Test ntp handler renders the shipped distro ntp.conf templates. ... ok
+Ntp schema validation allows for an empty ntp: configuration. ... ok
+Ntp schema validation warns of invalid keys present in ntp config. ... ok
+Ntp schema validation warns of non-strings in pools or servers. ... ok
+Ntp schema validation warns of duplicates in servers or pools. ... ok
+Ntp schema validation warns of non-array pools or servers types. ... ok
+Test ntp handler configures timesyncd ... ok
+ntp_install installs via install_func when check_exe is absent. ... ok
+ntp_install calls install_func with empty list ... ok
+ntp_install doesn't attempt install when check_exe is found. ... ok
+When NTP_CONF exists, rename_ntp moves it. ... ok
+When NTP_CONF doesn't exist rename_ntp doesn't create a file. ... ok
+Test service is restarted/reloaded (defaults) ... ok
+Test service is restarted/reloaded (systemd) ... ok
+Test service is restarted/reloaded (systemd/timesyncd) ... ok
+write_ntp_config_template defaults pools servers upon empty config. ... ok
+write_ntp_config_template defaults pools servers upon empty config. ... ok
+write_ntp_config_template reads content from ntp.conf.tmpl. ... ok
+write_ntp_config_template reads content from ntp.conf.distro.tmpl. ... ok
+test_cmd_exit_nonzero_warns (tests.unittests.test_handler.test_handler_power_state.TestCheckCondition) ... ok
+test_cmd_exit_one_false (tests.unittests.test_handler.test_handler_power_state.TestCheckCondition) ... ok
+test_cmd_exit_zero_true (tests.unittests.test_handler.test_handler_power_state.TestCheckCondition) ... ok
+test_false_is_false (tests.unittests.test_handler.test_handler_power_state.TestCheckCondition) ... ok
+test_true_is_true (tests.unittests.test_handler.test_handler_power_state.TestCheckCondition) ... ok
+test_condition_default_is_true (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_condition_null_raises (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_empty_mode (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_invalid_delay (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_invalid_mode (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_irrelevant_config (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_message_present (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_no_config (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_no_message (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_valid_delay (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+test_valid_modes (tests.unittests.test_handler.test_handler_power_state.TestLoadPowerState) ... ok
+Update /etc/default/puppet to autostart if it exists. ... ok
+If chkconfig is present, enable puppet via checkcfg. ... ok
+If systemctl is present, enable puppet via systemctl. ... ok
+Cloud-config empty 'puppet' configuration installs latest puppet. ... ok
+Cloud-config with 'puppet' key installs when 'install' is True. ... ok
+Cloud-config 'puppet' configuration can specify a version. ... ok
+Cloud-config 'puppet' configuration starts puppet. ... ok
+When 'conf' is provided update values in PUPPET_CONF_PATH. ... ok
+Cloud-config containing no 'puppet' key is skipped. ... ok
+When devpath does not exist, a warning is logged. ... ok
+When devpath does not exist in a container, log a debug message. ... ok
+When device is not a block device, emit warning return False. ... ok
+When device is non-block device in container, emit debug log. ... ok
+When devpath is overlayroot (on MAAS), is_dev_writable is False. ... ok
+When unexpected OSError is raises by os.stat it is reraised. ... ok
+When root device is UUID in kernel commandline, update devpath. ... ok
+When root does not exist isn't in the cmdline, log warning. ... ok
+Do not resize / directly if it is read-only. (LP: #1734787). ... ok
+Do not resize / directly if it is read-only. (LP: #1734787). ... ok
+The handle function logs when the configuration disables resize. ... ok
+The handle reports json schema violations as a warning. ... ok
+handle noops when the root path is not found on the commandline. ... ok
+handle warns when get_mount_info sees unknown filesystem for /. ... ok
+test_skip_ufs_resize (tests.unittests.test_handler.test_handler_resizefs.TestResizefs) ... ok
+test_skip_ufs_resize_roundup (tests.unittests.test_handler.test_handler_resizefs.TestResizefs) ... ok
+Return None from rootdev_from_cmdline when root is not present. ... ok
+Return the cmdline root when the path starts with /dev. ... ok
+When cmdline root contains a LABEL, our root is disk/by-label. ... ok
+When cmdline root contains a UUID, our root is disk/by-uuid. ... ok
+Add /dev prefix to cmdline root when the path lacks the prefix. ... ok
+test_multiline_content (tests.unittests.test_handler.test_handler_rsyslog.TestApplyChanges) ... ok
+test_multiple_files (tests.unittests.test_handler.test_handler_rsyslog.TestApplyChanges) ... ok
+test_repeat_def (tests.unittests.test_handler.test_handler_rsyslog.TestApplyChanges) ... ok
+test_simple (tests.unittests.test_handler.test_handler_rsyslog.TestApplyChanges) ... ok
+test_legacy_defaults (tests.unittests.test_handler.test_handler_rsyslog.TestLoadConfig) ... ok
+test_legacy_full (tests.unittests.test_handler.test_handler_rsyslog.TestLoadConfig) ... ok
+test_new_configs (tests.unittests.test_handler.test_handler_rsyslog.TestLoadConfig) ... ok
+test_new_defaults (tests.unittests.test_handler.test_handler_rsyslog.TestLoadConfig) ... ok
+test_invalid_multiple_colon (tests.unittests.test_handler.test_handler_rsyslog.TestParseRemotesLine) ... ok
+test_invalid_port (tests.unittests.test_handler.test_handler_rsyslog.TestParseRemotesLine) ... ok
+test_name_in_string (tests.unittests.test_handler.test_handler_rsyslog.TestParseRemotesLine) ... ok
+test_valid_ipv6 (tests.unittests.test_handler.test_handler_rsyslog.TestParseRemotesLine) ... ok
+test_valid_ipv6_with_port (tests.unittests.test_handler.test_handler_rsyslog.TestParseRemotesLine) ... ok
+test_valid_port (tests.unittests.test_handler.test_handler_rsyslog.TestParseRemotesLine) ... ok
+test_header_footer (tests.unittests.test_handler.test_handler_rsyslog.TestRemotesToSyslog) ... ok
+test_simple (tests.unittests.test_handler.test_handler_rsyslog.TestRemotesToSyslog) ... ok
+test_with_empty_or_null (tests.unittests.test_handler.test_handler_rsyslog.TestRemotesToSyslog) ... ok
+Commands which can't be converted to shell will raise errors. ... ok
+Schema validation warns of non-array or string runcmd items. ... ok
+Schema validation warns of non-array type for runcmd key. ... ok
+When the provided config doesn't contain runcmd, skip it. ... ok
+Valid runcmd schema is written to a runcmd shell script. ... ok
+test_append_random (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_append_random_b64 (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_append_random_base64 (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_append_random_gz (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_append_random_gzip (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_append_random_metadata (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_append_random_unknown_encoding (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_file_in_environment_for_command (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_seed_command_and_required (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_seed_command_not_provided (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_seed_command_provided_and_available (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_unavailable_seed_command_and_required_raises_error (tests.unittests.test_handler.test_handler_seed_random.TestRandomSeed) ... ok
+test_write_hostname_debian (tests.unittests.test_handler.test_handler_set_hostname.TestHostname) ... ok
+test_write_hostname_rhel (tests.unittests.test_handler.test_handler_set_hostname.TestHostname) ... ok
+test_write_hostname_sles (tests.unittests.test_handler.test_handler_set_hostname.TestHostname) ... ok
+test_package_ops_1 (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_package_ops_common_filename (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_package_ops_config_only (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_package_ops_config_overrides_file (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_package_ops_install_and_config (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_package_ops_install_long_config_short (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_package_ops_namespacing (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_package_ops_with_file (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_does_not_pad_cfgfile (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_long_configs_short (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_config_bytes (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_config_dict (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_config_int (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_config_list (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_config_string (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_localsnap (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_localsnap_localconfig (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_snap (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_render_op_snap_config (tests.unittests.test_handler.test_handler_snappy.TestInstallPackages) ... ok
+test_add_assertions_nonlist (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_add_assertions (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_add_assertions_ack_fails (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_add_assertions_empty (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_add_snap_user_email_known (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_add_snap_user_email_only (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_add_snap_user_no_config (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_add_snap_user_no_email (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_add_snap_user_not_dict (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_handle_no_config (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_handle_snapuser (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_handle_snapuser_known (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_handle_snapuser_known_managed (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_handle_snapuser_known_no_assertion (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_snap_config_handle_system_not_snappy (tests.unittests.test_handler.test_handler_snappy.TestSnapConfig) ... ok
+test_do_register (tests.unittests.test_handler.test_handler_spacewalk.TestSpacewalk) ... ok
+test_is_registered (tests.unittests.test_handler.test_handler_spacewalk.TestSpacewalk) ... ok
+test_not_is_registered (tests.unittests.test_handler.test_handler_spacewalk.TestSpacewalk) ... ok
+test_set_timezone_sles (tests.unittests.test_handler.test_handler_timezone.TestTimezone) ... ok
+A valid integer should return itself. ... ok
+A string with invalid octal should warn and return default. ... ok
+If None is passed as perms, then default should be returned. ... ok
+A string should be read as octal. ... ok
+test_all_decodings (tests.unittests.test_handler.test_handler_write_files.TestWriteFiles) ... ok
+test_simple (tests.unittests.test_handler.test_handler_write_files.TestWriteFiles) ... ok
+test_yaml_binary (tests.unittests.test_handler.test_handler_write_files.TestWriteFiles) ... ok
+test_bad_config (tests.unittests.test_handler.test_handler_yum_add_repo.TestConfig) ... ok
+test_write_config (tests.unittests.test_handler.test_handler_yum_add_repo.TestConfig) ... ok
+test_write_config_array (tests.unittests.test_handler.test_handler_yum_add_repo.TestConfig) ... ok
+Config has no baseurl, no file should be written ... ok
+Write valid configuration data ... ok
+Write configuration but skip writing 'configdir' setting ... ok
+When the config section is empty no new data should be written to ... ok
+When the config section is not empty but there are no values ... ok
+Test that the handler ends up calling the renderers ... ok
+When there is no config section no new data should be written to ... ok
+When there is no repo data nothing should happen ... ok
+Verify the content of a repo file ... ok
+Verify valid repos get written ... ok
+Errors are annotated for lists with items on separate lines. ... ok
+With no schema_errors, print the original content. ... ok
+With schema_errors, error lines are annotated and a footer added. ... ok
+Validate schema of cloud_tests yaml files looking for warnings. ... ok
+get_schema_doc converts enum types to yaml and delimits with '/'. ... ok
+get_schema_doc delimits multiple property types with a '/'. ... ok
+get_schema_doc describes array items oneOf declarations in type. ... ok
+get_schema_doc properly indented examples as a list of strings. ... ok
+get_schema_doc raises KeyErrors on missing keys. ... ok
+get_schema_doc returns restructured text for a cloudinit schema. ... ok
+Every cloudconfig module with schema is listed in allOf keyword. ... ok
+When FULL_SCHEMA global is already set, get_schema returns it. ... ok
+Main exits non-zero and reports an error on missing parameters. ... ok
+When --doc parameter is provided, main generates documentation. ... ok
+When --config-file parameter is provided, main validates schema. ... ok
+SchemaValidationError is initialized from schema_errors. ... ok
+On absent config_path, validate_cloudconfig_file errors. ... ok
+On invalid header, validate_cloudconfig_file errors. ... ok
+On non-yaml format, validate_cloudconfig_file errors. ... ok
+validate_cloudconfig_file raises errors on invalid schema. ... ok
+Warning from validate_cloudconfig_schema when missing jsonschema. ... ok
+With strict True, validate_cloudconfig_schema errors on format. ... ok
+When strict is False validate_cloudconfig_schema emits warnings. ... ok
+When strict is True validate_cloudconfig_schema raises errors. ... ok
+test_get_ipath_and_empty_instance_id_returns_none (tests.unittests.test_helpers.TestPaths) ... ok
+test_get_ipath_and_instance_id_with_slashes (tests.unittests.test_helpers.TestPaths) ... ok
+Test that log message have timestamp in UTC (gmtime) ... ok
+test_compat_merge_sub_dict (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_compat_merge_sub_dict2 (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_compat_merge_sub_list (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_compat_merges_dict (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_compat_merges_dict2 (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_compat_merges_list (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_compat_merges_str (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_merge_cc_samples (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_seed_runs (tests.unittests.test_merging.TestSimpleRun) ... ok
+test_cmdline_convert_dhcp (tests.unittests.test_net.TestCmdlineConfigParsing) ... ok
+test_cmdline_convert_dhcp6 (tests.unittests.test_net.TestCmdlineConfigParsing) ... ok
+test_cmdline_convert_static (tests.unittests.test_net.TestCmdlineConfigParsing) ... ok
+test_cmdline_with_b64 (tests.unittests.test_net.TestCmdlineConfigParsing) ... ok
+test_cmdline_with_b64_gz (tests.unittests.test_net.TestCmdlineConfigParsing) ... ok
+test_config_from_cmdline_net_cfg (tests.unittests.test_net.TestCmdlineConfigParsing) ... ok
+test_ip_cmdline_both_ip_ip6 (tests.unittests.test_net.TestCmdlineReadKernelConfig) ... ok
+test_ip_cmdline_read_kernel_cmdline_ip (tests.unittests.test_net.TestCmdlineReadKernelConfig) ... ok
+test_ip_cmdline_read_kernel_cmdline_ip6 (tests.unittests.test_net.TestCmdlineReadKernelConfig) ... ok
+test_ip_cmdline_read_kernel_cmdline_none (tests.unittests.test_net.TestCmdlineReadKernelConfig) ... ok
+test_config_with_explicit_loopback (tests.unittests.test_net.TestEniNetRendering) ... ok
+test_default_generation (tests.unittests.test_net.TestEniNetRendering) ... ok
+test_no_header (tests.unittests.test_net.TestEniNetworkStateToEni) ... ok
+test_no_hwaddress (tests.unittests.test_net.TestEniNetworkStateToEni) ... ok
+test_with_header (tests.unittests.test_net.TestEniNetworkStateToEni) ... ok
+test_routes_rendered (tests.unittests.test_net.TestEniRoundTrip) ... ok
+testsimple_convert_and_render (tests.unittests.test_net.TestEniRoundTrip) ... ok
+testsimple_render_all (tests.unittests.test_net.TestEniRoundTrip) ... ok
+Test rendering of 'manual' for 'type' and 'control'. ... ok
+testsimple_render_small (tests.unittests.test_net.TestEniRoundTrip) ... ok
+testsimple_render_v4_and_v6 (tests.unittests.test_net.TestEniRoundTrip) ... ok
+testsimple_render_v4_and_v6_static (tests.unittests.test_net.TestEniRoundTrip) ... ok
+test_device_driver (tests.unittests.test_net.TestGenerateFallbackConfig) ... ok
+test_device_driver_blacklist (tests.unittests.test_net.TestGenerateFallbackConfig) ... ok
+test_gi_excludes_any_without_mac_address (tests.unittests.test_net.TestGetInterfaces) ... ok
+test_gi_excludes_bridges (tests.unittests.test_net.TestGetInterfaces) ... ok
+test_gi_excludes_stolen_macs (tests.unittests.test_net.TestGetInterfaces) ... ok
+test_gi_includes_duplicate_macs (tests.unittests.test_net.TestGetInterfaces) ... ok
+Duplicate macs of 00:00:00:00:00:00 should be skipped. ... ok
+test_excludes_any_without_mac_address (tests.unittests.test_net.TestGetInterfacesByMac) ... ok
+test_excludes_bridges (tests.unittests.test_net.TestGetInterfacesByMac) ... ok
+test_excludes_stolen_macs (tests.unittests.test_net.TestGetInterfacesByMac) ... ok
+test_excludes_vlans (tests.unittests.test_net.TestGetInterfacesByMac) ... ok
+test_raise_exception_on_duplicate_macs (tests.unittests.test_net.TestGetInterfacesByMac) ... ok
+test_natural_order (tests.unittests.test_net.TestInterfacesSorting) ... ok
+test_eni_and_sysconfig_available (tests.unittests.test_net.TestNetRenderers) ... ok
+test_first_in_priority (tests.unittests.test_net.TestNetRenderers) ... ok
+test_search_returns_empty_on_none (tests.unittests.test_net.TestNetRenderers) ... ok
+test_select_none_found_raises (tests.unittests.test_net.TestNetRenderers) ... ok
+test_select_positive (tests.unittests.test_net.TestNetRenderers) ... ok
+test_clean_known_config_cleaned (tests.unittests.test_net.TestNetplanCleanDefault) ... ok
+test_clean_known_config_cleans_only_expected (tests.unittests.test_net.TestNetplanCleanDefault) ... ok
+test_clean_unknown_config_not_cleaned (tests.unittests.test_net.TestNetplanCleanDefault) ... ok
+test_default_generation (tests.unittests.test_net.TestNetplanNetRendering) ... ok
+test_netplan_postcmds (tests.unittests.test_net.TestNetplanPostcommands) ... ok
+test_netplan_render_calls_postcmds (tests.unittests.test_net.TestNetplanPostcommands) ... ok
+testsimple_render_all (tests.unittests.test_net.TestNetplanRoundTrip) ... ok
+testsimple_render_bond_netplan (tests.unittests.test_net.TestNetplanRoundTrip) ... ok
+testsimple_render_bond_v2_input_netplan (tests.unittests.test_net.TestNetplanRoundTrip) ... ok
+testsimple_render_manual (tests.unittests.test_net.TestNetplanRoundTrip) ... ok
+testsimple_render_small_netplan (tests.unittests.test_net.TestNetplanRoundTrip) ... ok
+testsimple_render_v4_and_v6 (tests.unittests.test_net.TestNetplanRoundTrip) ... ok
+testsimple_render_v4_and_v6_static (tests.unittests.test_net.TestNetplanRoundTrip) ... ok
+Test mask_and_ipv4_to_bcast_addr proper execution. ... ok
+test_rename_all (tests.unittests.test_net.TestRenameInterfaces) ... ok
+test_rename_all_bounce (tests.unittests.test_net.TestRenameInterfaces) ... ok
+test_rename_duplicate_macs (tests.unittests.test_net.TestRenameInterfaces) ... ok
+test_rename_duplicate_macs_driver_no_devid (tests.unittests.test_net.TestRenameInterfaces) ... ok
+_rename_interfaces must support upper or lower case macs. ... ok
+test_rename_multi_mac_dups (tests.unittests.test_net.TestRenameInterfaces) ... ok
+test_rename_no_driver_no_device_id (tests.unittests.test_net.TestRenameInterfaces) ... ok
+test_all_config (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_bond_config (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_bridge_config (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_config_with_explicit_loopback (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_default_generation (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_manual_config (tests.unittests.test_net.TestSysConfigRendering) ... ok
+ValueError is raised when duplicate ipv4 gateways exist. ... ok
+ValueError is raised when duplicate ipv6 gateways exist. ... ok
+test_network_config_v1_samples (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_openstack_rendering_samples (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_small_config (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_v4_and_v6_static_config (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_vlan_config (tests.unittests.test_net.TestSysConfigRendering) ... ok
+test_no_required_and_optional (tests.unittests.test_pathprefix2dict.TestPathPrefix2Dict) ... ok
+test_required_and_optional (tests.unittests.test_pathprefix2dict.TestPathPrefix2Dict) ... ok
+test_required_missing (tests.unittests.test_pathprefix2dict.TestPathPrefix2Dict) ... ok
+test_required_only (tests.unittests.test_pathprefix2dict.TestPathPrefix2Dict) ... ok
+test_added_item_included_in_output (tests.unittests.test_registry.TestDictRegistry) ... ok
+test_keys_cannot_be_replaced (tests.unittests.test_registry.TestDictRegistry) ... ok
+test_modifying_registered_items_isnt_exposed_to_other_callers (tests.unittests.test_registry.TestDictRegistry) ... ok
+test_registry_starts_out_empty (tests.unittests.test_registry.TestDictRegistry) ... ok
+test_base_reporting_handler_is_abstract (tests.unittests.test_reporting.TestBaseReportingHandler) ... ok
+test_log_handler_registered_by_default (tests.unittests.test_reporting.TestDefaultRegisteredHandler) ... ok
+test_as_has_result (tests.unittests.test_reporting.TestFinishReportingEvent) ... ok
+test_appropriate_logger_used (tests.unittests.test_reporting.TestLogHandler) ... ok
+test_log_message_uses_event_as_string (tests.unittests.test_reporting.TestLogHandler) ... ok
+test_single_log_message_at_info_published (tests.unittests.test_reporting.TestLogHandler) ... ok
+test_invalid_result_raises_attribute_error (tests.unittests.test_reporting.TestReportFinishEvent) ... ok
+test_report_finish_event_passes_something_with_as_string_to_handlers (tests.unittests.test_reporting.TestReportFinishEvent) ... ok
+test_reporting_successful_finish_has_sensible_string_repr (tests.unittests.test_reporting.TestReportFinishEvent) ... ok
+test_reporting_unsuccessful_finish_has_sensible_string_repr (tests.unittests.test_reporting.TestReportFinishEvent) ... ok
+test_report_start_event_passes_something_with_as_string_to_handlers (tests.unittests.test_reporting.TestReportStartEvent) ... ok
+test_empty_configuration_doesnt_add_handlers (tests.unittests.test_reporting.TestReportingConfiguration) ... ok
+test_handler_config_not_modified (tests.unittests.test_reporting.TestReportingConfiguration) ... ok
+test_handlers_removed_if_falseish_specified (tests.unittests.test_reporting.TestReportingConfiguration) ... ok
+test_looks_up_handler_by_type_and_adds_it (tests.unittests.test_reporting.TestReportingConfiguration) ... ok
+test_uses_non_type_parts_of_config_dict_as_kwargs (tests.unittests.test_reporting.TestReportingConfiguration) ... ok
+test_as_dict (tests.unittests.test_reporting.TestReportingEvent) ... ok
+test_as_string (tests.unittests.test_reporting.TestReportingEvent) ... ok
+test_child_fullname_respects_parent (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_child_result_bubbles_up (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_finish_exception_defaults_fail (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_message_updatable (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_message_used_in_finish (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_reporting_child_default_to_parent (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_reporting_disabled_does_not_report_events (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_reporting_event_has_sane_repr (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_result_on_exception_used (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_set_invalid_result_raises_value_error (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_start_and_finish_success (tests.unittests.test_reporting.TestReportingEventStack) ... ok
+test_invalid_status_access_raises_value_error (tests.unittests.test_reporting.TestStatusAccess) ... ok
+Emulates a system that is already registered. Ensure it gets ... ok
+Registration with auto-attach, service-level, adding pools, ... ok
+Simple registration with username and password ... ok
+test_update_repos_disable_with_none (tests.unittests.test_rh_subscription.GoodTests) ... ok
+Attempt to register with a key that we don't know ... ok
+Attempt to register without the org key/value ... ok
+Attempt to register without the password key/value ... ok
+Register with pools that are not in the format of a list ... ok
+Register with repos that are not in the format of a list ... ok
+Attempt to register using service-level without the auto-attach key ... ok
+test_none_ds (tests.unittests.test_runs.test_merge_run.TestMergeRun) ... ok
+run_section forced skipped modules by using unverified_modules. ... ok
+Init and run_section default behavior creates appropriate dirs. ... ok
+Skip modules which define distros attribute as supporting 'all'. ... ok
+Any modules which do not define a distros attribute are run. ... ok
+Skip modules which define distros which don't match the current. ... ok
+test_parse_invalid_keytype (tests.unittests.test_sshutil.TestAuthKeyLineParser) ... ok
+test_parse_no_comment (tests.unittests.test_sshutil.TestAuthKeyLineParser) ... ok
+test_parse_with_keyoptions (tests.unittests.test_sshutil.TestAuthKeyLineParser) ... ok
+test_parse_with_options_passed_in (tests.unittests.test_sshutil.TestAuthKeyLineParser) ... ok
+test_simple_parse (tests.unittests.test_sshutil.TestAuthKeyLineParser) ... ok
+test_blank_lines (tests.unittests.test_sshutil.TestParseSSHConfig) ... ok
+test_comment_line (tests.unittests.test_sshutil.TestParseSSHConfig) ... ok
+test_empty_file (tests.unittests.test_sshutil.TestParseSSHConfig) ... ok
+test_lower_case_config (tests.unittests.test_sshutil.TestParseSSHConfig) ... ok
+test_lower_case_with_equals (tests.unittests.test_sshutil.TestParseSSHConfig) ... ok
+test_not_a_file (tests.unittests.test_sshutil.TestParseSSHConfig) ... ok
+test_upper_case_config (tests.unittests.test_sshutil.TestParseSSHConfig) ... ok
+test_upper_case_with_equals (tests.unittests.test_sshutil.TestParseSSHConfig) ... ok
+new entries that are invalid should be skipped. ... ok
+new entries with the same base64 should replace old. ... ok
+test_detection (tests.unittests.test_templating.TestTemplates) ... SKIP: cheetah renderer not available
+test_render_basic (tests.unittests.test_templating.TestTemplates) ... ok
+test_render_basic2 (tests.unittests.test_templating.TestTemplates) ... ok
+test_render_basic_deeper (tests.unittests.test_templating.TestTemplates) ... ok
+test_render_basic_no_parens (tests.unittests.test_templating.TestTemplates) ... ok
+test_render_basic_parens (tests.unittests.test_templating.TestTemplates) ... ok
+test_render_cheetah (tests.unittests.test_templating.TestTemplates) ... ok
+test_render_default (tests.unittests.test_templating.TestTemplates) ... ok
+test_render_jinja (tests.unittests.test_templating.TestTemplates) ... ok
+Empty directories should be deleted. ... ok
+Single file should be deleted. ... ok
+Nested directories should be deleted. ... ok
+Non-empty directories should be deleted. ... ok
+Symlinks should be deleted. ... ok
+Ensure directory itself is not deleted. ... ok
+test_decode_binary_plain_text_with_hex (tests.unittests.test_util.TestEncode) ... ok
+Single string is converted to one element list. ... ok
+Default is not returned if key is found. ... ok
+None is returned if key is not found and no default given. ... ok
+Default is returned if key is not found. ... ok
+If value is None empty list is returned. ... ok
+test_cmdline_reads_debug_env (tests.unittests.test_util.TestGetCmdline) ... ok
+When default_log_file is set get_config_logfiles finds it. ... ok
+An empty config passed to get_config_logfiles returns empty list. ... ok
+When output configuration is parsed when appending to a file. ... ok
+When output configuration is parsed when redirecting to a file. ... ok
+When output configuration is parsed when teeing files. ... ok
+test_keyval_str_to_dict (tests.unittests.test_util.TestKeyValStrings) ... ok
+Shell comments should be allowed in the content. ... ok
+test_bogus_returns_default (tests.unittests.test_util.TestLoadYaml) ... ok
+test_nonallowed_returns_default (tests.unittests.test_util.TestLoadYaml) ... ok
+If yaml.load returns None, then default should be returned. ... ok
+test_python_unicode (tests.unittests.test_util.TestLoadYaml) ... ok
+test_simple (tests.unittests.test_util.TestLoadYaml) ... ok
+test_unsafe_types (tests.unittests.test_util.TestLoadYaml) ... ok
+test_unicode_not_messed_up (tests.unittests.test_util.TestMessageFromString) ... ok
+test_invalid_mountinfo (tests.unittests.test_util.TestMountinfoParsing) ... ok
+test_precise_ext4_root (tests.unittests.test_util.TestMountinfoParsing) ... ok
+test_raring_btrfs_root (tests.unittests.test_util.TestMountinfoParsing) ... ok
+test_given_log_level_used (tests.unittests.test_util.TestMultiLog) ... ok
+test_log_level_defaults_to_debug (tests.unittests.test_util.TestMultiLog) ... ok
+test_logs_dont_go_to_stdout_if_console_exists (tests.unittests.test_util.TestMultiLog) ... ok
+test_logs_go_to_console_by_default (tests.unittests.test_util.TestMultiLog) ... ok
+test_logs_go_to_log_if_given (tests.unittests.test_util.TestMultiLog) ... ok
+test_logs_go_to_stdout_if_console_does_not_exist (tests.unittests.test_util.TestMultiLog) ... ok
+test_newlines_stripped_from_log_call (tests.unittests.test_util.TestMultiLog) ... ok
+test_stderr_not_used_if_false (tests.unittests.test_util.TestMultiLog) ... ok
+test_stderr_used_by_default (tests.unittests.test_util.TestMultiLog) ... ok
+test_pexec_error_empty_msgs (tests.unittests.test_util.TestProcessExecutionError) ... ok
+test_pexec_error_indent_text (tests.unittests.test_util.TestProcessExecutionError) ... ok
+test_pexec_error_multi_line_msgs (tests.unittests.test_util.TestProcessExecutionError) ... ok
+test_pexec_error_single_line_msgs (tests.unittests.test_util.TestProcessExecutionError) ... ok
+test_pexec_error_type (tests.unittests.test_util.TestProcessExecutionError) ... ok
+In a container read_dmi_data should always return None. ... ok
+In a container even bogus keys return None. ... ok
+test_dmidecode_not_used_on_arm (tests.unittests.test_util.TestReadDMIData) ... ok
+test_dmidecode_used_if_no_sysfs_file_on_disk (tests.unittests.test_util.TestReadDMIData) ... ok
+test_dots_returned_instead_of_foxfox (tests.unittests.test_util.TestReadDMIData) ... ok
+test_none_returned_if_dmidecode_not_in_path (tests.unittests.test_util.TestReadDMIData) ... ok
+test_none_returned_if_neither_source_has_data (tests.unittests.test_util.TestReadDMIData) ... ok
+test_sysfs_used_with_key_in_mapping_and_file_on_disk (tests.unittests.test_util.TestReadDMIData) ... ok
+test_unicode_not_messed_up (tests.unittests.test_util.TestReadSeeded) ... ok
+test_bunch_of_slashes_in_path (tests.unittests.test_util.TestSubp) ... ok
+Independent of system LC_CTYPE, args can contain utf-8 strings. ... ok
+Raised exc should have stderr, stdout as bytes if no decode. ... ok
+Raised exc should have stderr, stdout as string if no decode. ... ok
+test_returns_none_if_no_capture (tests.unittests.test_util.TestSubp) ... ok
+test_subp_capture_stderr (tests.unittests.test_util.TestSubp) ... ok
+test_subp_decode_ignore (tests.unittests.test_util.TestSubp) ... ok
+test_subp_decode_invalid_utf8_replaces (tests.unittests.test_util.TestSubp) ... ok
+test_subp_decode_strict_raises (tests.unittests.test_util.TestSubp) ... ok
+test_subp_decode_strict_valid_utf8 (tests.unittests.test_util.TestSubp) ... ok
+test_subp_env_and_update_env (tests.unittests.test_util.TestSubp) ... ok
+test_subp_handles_utf8 (tests.unittests.test_util.TestSubp) ... ok
+test_subp_reads_env (tests.unittests.test_util.TestSubp) ... ok
+test_subp_respects_decode_false (tests.unittests.test_util.TestSubp) ... ok
+test_subp_update_env (tests.unittests.test_util.TestSubp) ... ok
+Warn on no #! in script ... ok
+malformed os-release should not raise exception. ... ok
+A Channel.ini file with 'ubuntu-core' indicates snappy. ... ok
+os-release containing ID=ubuntu-core is snappy. ... ok
+os-release containing ID="ubuntu-core" is snappy. ... ok
+If no positive identification, then not snappy. ... ok
+The string snap_core= in kernel cmdline indicates snappy. ... ok
+Existence of /etc/system-image/config.d indicates snappy. ... ok
+Verify basic usage with default args. ... ok
+Verify that file is created with mode 0o644 if copy_mode ... ok
+Verify that file is created using mode of existing file ... ok
+Verify custom omode works properly. ... ok
+Verifiy that directories are created is required. ... ok
+Verify explicit file mode works properly. ... ok
+Make sure the selinux guard is called correctly. ... ok
+test_has_network_config_v1 (tests.unittests.test_version.TestExportsFeatures) ... ok
+test_has_network_config_v2 (tests.unittests.test_version.TestExportsFeatures) ... ok
+This test is to identify if rclocal was properly populated to be ... ok
+This test is designed to verify the behavior based on the presence of ... ok
+This test is designed to verify the different scenarios associated ... ok
+Tests Config class for a configuration with two DHCP NICs. ... ok
+test_config_password (tests.unittests.test_vmware_config_file.TestVmwareConfigFile) ... ok
+test_config_reset_passwd (tests.unittests.test_vmware_config_file.TestVmwareConfigFile) ... ok
+Tests Config class for a configuration with two static NICs. ... ok
+test_custom_script (tests.unittests.test_vmware_config_file.TestVmwareConfigFile) ... ok
+Tests instance id for the DatasourceOVF ... ok
+Tests if gen_subnet properly calculates network subnet from ... ok
+Tests if get_network_config_from_conf properly ... ok
+Tests DNS and nameserver settings in a configuration. ... ok
+Tests if NicConfigurator properly calculates network subnets ... ok
+Tests if NicConfigurator properly calculates network subnets ... ok
+Tests basic utility methods of ConfigFile class ... ok
+Cisource file is read and parsed into a tuple of events and data. ... ok
+Rawdata is split and parsed into a tuple of events and data ... ok
+parse_ci_logline returns an event parse from cloud-init format. ... ok
+parse_ci_logline returns a finish event for a parsed log line. ... ok
+parse_ci_logline returns an event parse from journalctl format. ... ok
+When no separators are found, parse_ci_logline returns None. ... ok
+Logs with cloud-init detailed formats will be properly parsed. ... ok
+Journalctl precise timestamps lack a year. Add year and parse. ... ok
+Syslog timestamps lack a year. Add year and properly parse. ... ok
+Dump sends unexpected timestamp formats to data for processing. ... ok
+collect-logs creates a tarfile with all related cloud-init info. ... ok
+collect-logs include userdata when --include-userdata is set. ... ok
+handle_clean_args_reboots when reboot arg is provided. ... ok
+remove_artifacts leaves logs when remove_logs is False. ... ok
+remove_artifacts removes seed dir when remove_seed is True. ... ok
+remove_artifacts cleans artifacts dir with exception of seed dir. ... ok
+remove_artifacts removes logs when remove_logs is True. ... ok
+remove_artifacts cleans artifacts dir unlinking any symlinks. ... ok
+remove_artifacts returns non-zero on failure and prints an error. ... ok
+clean.main can be run as a standalone script. ... ok
+Not disabled when using systemd and enabled via commandline. ... ok
+When not in an environment using systemd, return False. ... ok
+Report enabled when systemd generator creates the enabled file. ... ok
+When using systemd and disable_file is present return disabled. ... ok
+When using systemd and disable_file is present return disabled. ... ok
+When cloud-init-generator doesn't write enabled file return True. ... ok
+status.main can be run as a standalone script. ... ok
+Reports error when any stage has errors. ... ok
+Long format of error status includes all error messages. ... ok
+When cloudinit is disabled, return disabled reason. ... ok
+Report done results.json exists no stages are unfinished. ... ok
+Long format of done status includes datasource info. ... ok
+When status.json does not exist yet, return 'not run'. ... ok
+Report running when status exists with an unfinished stage. ... ok
+Long format reports the stage in which we are running. ... ok
+Report running when status.json exists but result.json does not. ... ok
+Specifying wait will poll every 1/4 second until done state. ... ok
+Specifying wait will poll every 1/4 second until error state. ... ok
+When dhclient doesn't exist in the OS, log the issue and no-op. ... ok
+maybe_perform_dhcp_discovery passes tmpdir to dhcp_discovery. ... ok
+dhcp_discovery brings up the interface and runs dhclient. ... ok
+dhcp_discovery waits for the presence of pidfile and dhcp.leases. ... ok
+dhcp_discovery logs a warning when pidfile contains invalid content. ... ok
+Log and do nothing when nic is absent and no fallback is found. ... ok
+When the provided nic doesn't exist, log a message and no-op. ... ok
+parse_dhcp_lease_file errors when file content is empty. ... ok
+parse_dhcp_lease_file errors when file content isn't dhcp leases. ... ok
+parse_dhcp_lease_file returns a list of all leases within. ... ok
+Multiple leases files on azure with one found return that value. ... ok
+A non-existing leases dir should return empty dict. ... ok
+A leases dir with no lease files should return empty dictionary. ... ok
+On Azure, option 245 should be present, verify it specifically. ... ok
+A leases dir with one leases file. ... ok
+test_apply_v1_renames (cloudinit.net.tests.test_init.TestApplyNetworkCfgNames) ... ok
+test_apply_v2_renames (cloudinit.net.tests.test_init.TestApplyNetworkCfgNames) ... ok
+test_apply_v2_renames_raises_runtime_error_on_unknown_version (cloudinit.net.tests.test_init.TestApplyNetworkCfgNames) ... ok
+test_apply_v2_renames_skips_without_mac (cloudinit.net.tests.test_init.TestApplyNetworkCfgNames) ... ok
+test_apply_v2_renames_skips_without_setname (cloudinit.net.tests.test_init.TestApplyNetworkCfgNames) ... ok
+Raise an error when prefix_or_mask is not a netmask or prefix. ... ok
+No required params for EphemeralIPv4Network can be None. ... ok
+EphemeralIPv4Network handles exception when address is setup. ... ok
+EphemeralIPv4Network performs teardown on the device if setup. ... ok
+Add the route when router is set and no default route exists. ... ok
+EphemeralIPv4Network takes a valid prefix to setup the network. ... ok
+generate_fallback_config will skip any bonded interfaces. ... ok
+generate_fallback_config will skip any bridges interfaces. ... ok
+generate_fallback_config will skip any veth interfaces. ... ok
+generate_fallback_config finds any connected device with a mac. ... ok
+generate_fallback_config finds any dormant device with a mac. ... ok
+generate_fallback_config finds any dormant device with a mac. ... ok
+get_devicelist returns empty directoty listing for SYS_CLASS_NET. ... ok
+get_devicelist returns empty list when missing SYS_CLASS_NET. ... ok
+get_devicelist returns a directory listing for SYS_CLASS_NET. ... ok
+get_devicelist raise any non-ENOENT OSerror. ... ok
+get_interfaces returns the mac from SYS_CLASS_NET/dev/address. ... ok
+get_device_list returns False when no mac is reported. ... ok
+get_interfaces returns the source device mac for bonded devices. ... ok
+Ignore 00:00:00:00:00:00 addresses from get_interfaces_by_mac. ... ok
+Ignore interfaces without an address from get_interfaces_by_mac. ... ok
+get_interfaces returns an empty list when missing SYS_CLASS_NET. ... ok
+Return False from interface_has_own_mac when address is stolen. ... ok
+When addr_assign_type is absent, interface_has_own_mac errors. ... ok
+Return False from interface_has_own_mac when mac isn't stolen. ... ok
+is_bond is True when /sys/net/devname/bonding exists. ... ok
+is_bridge is True when /sys/net/devname/bridge exists. ... ok
+is_connected is True when /sys/net/devname/iflink reports 2. ... ok
+is_connected is True if wireless /sys/net/devname/carrier is 1. ... ok
+is_physical is True when /sys/net/devname/device exists. ... ok
+is_present is True when /sys/net/devname exists. ... ok
+is_up is False if sys/net/devname/operstate is 'down' or invalid. ... ok
+is_up is True if sys/net/devname/operstate is 'up' or 'unknown'. ... ok
+is_vlan is True when /sys/net/devname/uevent has DEVTYPE=vlan. ... ok
+is_wireless is True when /sys/net/devname/wireless exists. ... ok
+read_sys_net raises a KeyError and logs details on failure. ... ok
+read_sys_net handles OSError/IOError with on_enoent if provided. ... ok
+read_sys_net handles translation errors calling on_keyerror. ... ok
+read_sys_net_safe returns None on failures. ... ok
+read_sys_net_safe returns None on failures. ... ok
+read_sys_net_safe returns None when content is not an int. ... ok
+read_sys_net raises OSError/IOError when file doesn't exist. ... ok
+read_sys_net_safe returns False on translation failures. ... ok
+read_sys_net_safe returns False on file not found failures. ... ok
+read_sys_net strips whitespace from the contents of a sys file. ... ok
+read_sys_net translates content when translate dict is provided. ... ok
+sys_dev_path returns a path under SYS_CLASS_NET for a device. ... ok
+When path param isn't provided it defaults to empty string. ... ok
+Raise an error when _get_data is not implemented. ... ok
+DataSource initializes metadata attributes, ds_cfg and ud_proc. ... ok
+Init uses DataSource.dsname for sourcing ds_cfg. ... ok
+On py3, get_data base64encodes any unserializable content. ... ok
+Datasource.get_data uses the subclass' version of _get_data. ... ok
+On py2 get_data handles bytes values without having to b64encode. ... SKIP: json serialization on <= py2.7 handles bytes
+get_data warns unserializable content in INSTANCE_JSON_FILE. ... ok
+get_data writes INSTANCE_JSON_FILE to run_dir as readonly root. ... ok
+When non-utf-8 values exist in py2 instance-data is not written. ... SKIP: Only python2 hits UnicodeDecodeErrors on non-utf8
+The string representation of the datasource is the classname. ... ok
+netdev_pformat properly rendering network device information. ... ok
+netdev_pformat properly rendering network device information. ... ok
+SSH authorized keys are rendered as they were with PrettyTable. ... ok
+get_string() method returns the same content as str(). ... ok
+Net device info is rendered as it was with PrettyTable. ... ok
+An empty table is rendered as PrettyTable would have done it. ... ok
+Route IPv4 info is rendered as it was with PrettyTable. ... ok
+mkdtemp creates a dir under /tmp for the unprivileged. ... ok
+mkdtemp creates a dir under /var/tmp/cloud-init when needs_exe. ... ok
+mkdtemp creates a dir under /run/cloud-init for the privileged. ... ok
+mkstemp creates secure tempfile under /tmp for the unprivileged. ... ok
+mkstemp creates a secure tempfile in /run/cloud-init for root. ... ok
+oauth_headers calls oaut1.hClient.sign with the provided url. ... ok
+oauth_headers raises a NotImplemented error when oauth absent. ... ok
+test_mount_is_ro (cloudinit.tests.test_util.TestUtil) ... ok
+test_mount_is_rw (cloudinit.tests.test_util.TestUtil) ... ok
+test_parse_mount_info_no_opts_arg (cloudinit.tests.test_util.TestUtil) ... ok
+test_parse_mount_info_no_opts_no_arg (cloudinit.tests.test_util.TestUtil) ... ok
+test_parse_mount_info_with_opts (cloudinit.tests.test_util.TestUtil) ... ok
+
+----------------------------------------------------------------------
+Ran 1312 tests in 6.855s
+
+OK (SKIP=8)
+make[2]: Leaving directory '/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380'
+make[1]: Leaving directory '/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380'
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary --with python2 --buildsystem=python_distutils
+   create-stamp debian/debhelper-build-stamp
+   dh_testroot -O--buildsystem=python_distutils
+   dh_prep -O--buildsystem=python_distutils
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380'
+dh_auto_install --destdir=debian/cloud-init
+	python setup.py install --force --root=/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init --no-compile -O0 --install-layout=deb
+running install
+running build
+running build_py
+running build_scripts
+running install_lib
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceDigitalOcean.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceOpenStack.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceEc2.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceNone.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceCloudSigma.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceSmartOS.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceScaleway.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceAltCloud.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceOVF.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceMAAS.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/openstack.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/digitalocean.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/azure.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/nic.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/ipv4_mode.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/guestcust_error.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/guestcust_event.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/nic_base.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/config_passwd.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/config.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/guestcust_state.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/config_namespace.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/boot_proto.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/config_nic.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/guestcust_util.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/config_source.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/config_custom_script.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/helpers/vmware/imc/config_file.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources/helpers/vmware/imc
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceAliYun.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceOpenNebula.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceConfigDrive.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceNoCloud.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceCloudStack.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceGCE.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceAzure.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/sources/DataSourceBigstep.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/sources
+copying build/lib.linux-x86_64-2.7/cloudinit/type_utils.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/url_helper.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/stages.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/settings.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_ssh.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_timezone.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_yum_add_repo.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_update_etc_hosts.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_fan.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_byobu.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_final_message.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_phone_home.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_locale.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_lxd.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_set_passwords.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_package_update_upgrade_install.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/schema.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_ntp.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_ssh_import_id.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_emit_upstart.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_update_hostname.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_users_groups.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_rh_subscription.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_growpart.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_write_files.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_seed_random.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_snap_config.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_disk_setup.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_rsyslog.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_disable_ec2_metadata.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_scripts_user.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_salt_minion.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_rightscale_userdata.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_spacewalk.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_puppet.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_snappy.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_bootcmd.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_keys_to_console.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_mcollective.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_foo.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_power_state_change.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_set_hostname.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_ca_certs.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_landscape.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_ssh_authkey_fingerprints.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_scripts_per_boot.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_scripts_per_instance.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_chef.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_zypper_add_repo.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_mounts.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_debug.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_migrator.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_scripts_per_once.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_resolv_conf.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_resizefs.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_apt_pipelining.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_runcmd.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_apt_configure.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_scripts_vendor.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/config/cc_grub_dpkg.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/config
+copying build/lib.linux-x86_64-2.7/cloudinit/netinfo.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/analyze
+copying build/lib.linux-x86_64-2.7/cloudinit/analyze/dump.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/analyze
+copying build/lib.linux-x86_64-2.7/cloudinit/analyze/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/analyze
+copying build/lib.linux-x86_64-2.7/cloudinit/analyze/__main__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/analyze
+copying build/lib.linux-x86_64-2.7/cloudinit/analyze/show.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/analyze
+copying build/lib.linux-x86_64-2.7/cloudinit/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/dhclient_hook.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/ec2_utils.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/patcher.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/temp_utils.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/reporting
+copying build/lib.linux-x86_64-2.7/cloudinit/reporting/events.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/reporting
+copying build/lib.linux-x86_64-2.7/cloudinit/reporting/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/reporting
+copying build/lib.linux-x86_64-2.7/cloudinit/reporting/handlers.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/reporting
+copying build/lib.linux-x86_64-2.7/cloudinit/cs_utils.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/handlers
+copying build/lib.linux-x86_64-2.7/cloudinit/handlers/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/handlers
+copying build/lib.linux-x86_64-2.7/cloudinit/handlers/upstart_job.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/handlers
+copying build/lib.linux-x86_64-2.7/cloudinit/handlers/cloud_config.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/handlers
+copying build/lib.linux-x86_64-2.7/cloudinit/handlers/boot_hook.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/handlers
+copying build/lib.linux-x86_64-2.7/cloudinit/handlers/shell_script.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/handlers
+copying build/lib.linux-x86_64-2.7/cloudinit/atomic_helper.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/cloud.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/importer.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/apport.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/log.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/registry.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/util.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/serial.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/templater.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/simpletable.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/mergers
+copying build/lib.linux-x86_64-2.7/cloudinit/mergers/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/mergers
+copying build/lib.linux-x86_64-2.7/cloudinit/mergers/m_list.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/mergers
+copying build/lib.linux-x86_64-2.7/cloudinit/mergers/m_str.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/mergers
+copying build/lib.linux-x86_64-2.7/cloudinit/mergers/m_dict.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/mergers
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/rhel_util.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros/parsers
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/parsers/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros/parsers
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/parsers/hostname.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros/parsers
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/parsers/resolv_conf.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros/parsers
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/parsers/networkmanager_conf.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros/parsers
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/parsers/hosts.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros/parsers
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/parsers/sys_conf.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros/parsers
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/freebsd.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/ug_util.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/net_util.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/opensuse.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/fedora.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/sles.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/debian.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/ubuntu.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/centos.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/gentoo.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/rhel.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/distros/arch.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/distros
+copying build/lib.linux-x86_64-2.7/cloudinit/version.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/eni.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/renderers.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/renderer.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/network_state.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/netplan.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/dhcp.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/cmdline.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/udev.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/net/sysconfig.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/net
+copying build/lib.linux-x86_64-2.7/cloudinit/signal_handler.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/filters
+copying build/lib.linux-x86_64-2.7/cloudinit/filters/launch_index.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/filters
+copying build/lib.linux-x86_64-2.7/cloudinit/filters/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/filters
+copying build/lib.linux-x86_64-2.7/cloudinit/ssh_util.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/safeyaml.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd
+copying build/lib.linux-x86_64-2.7/cloudinit/cmd/status.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd
+copying build/lib.linux-x86_64-2.7/cloudinit/cmd/main.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd/devel
+copying build/lib.linux-x86_64-2.7/cloudinit/cmd/devel/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd/devel
+copying build/lib.linux-x86_64-2.7/cloudinit/cmd/devel/parser.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd/devel
+copying build/lib.linux-x86_64-2.7/cloudinit/cmd/devel/logs.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd/devel
+copying build/lib.linux-x86_64-2.7/cloudinit/cmd/__init__.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd
+copying build/lib.linux-x86_64-2.7/cloudinit/cmd/clean.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit/cmd
+copying build/lib.linux-x86_64-2.7/cloudinit/helpers.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/user_data.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/gpg.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+copying build/lib.linux-x86_64-2.7/cloudinit/warnings.py -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloudinit
+running install_data
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud
+copying RENDERED_TEMPDl3Zz3C/cloud.cfg -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/cloud.cfg.d
+copying config/cloud.cfg.d/README -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/cloud.cfg.d
+copying config/cloud.cfg.d/05_logging.cfg -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/cloud.cfg.d
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/chef_client.rb.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/ntp.conf.rhel.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/sources.list.ubuntu.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/ntp.conf.sles.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/timesyncd.conf.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/hosts.debian.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/resolv.conf.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/hosts.freebsd.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/ntp.conf.opensuse.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/hosts.redhat.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/ntp.conf.debian.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/ntp.conf.fedora.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/ntp.conf.ubuntu.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/hosts.suse.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+copying templates/sources.list.debian.tmpl -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/cloud/templates
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/cloud-init
+copying tools/ds-identify -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/cloud-init
+copying tools/uncloud-init -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/cloud-init
+copying tools/write-ssh-key-fingerprints -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/cloud-init
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init
+copying doc/README -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init
+copying doc/userdata.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init
+copying doc/var-lib-cloud.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init
+copying doc/status.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-update-apt.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-ntp.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-ca-certs.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-lxd.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-update-packages.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-run-cmds.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/part-handler.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/user-script.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-chef.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/kernel-cmdline.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-user-groups.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-landscape.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-final-message.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-launch-index.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/include-once.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-seed-random.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-archive.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-resolv-conf.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-reporting.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-growpart.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-yum-repo.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-power-state.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-write-files.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-phone-home.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-install-packages.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-disk-setup.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-archive-launch-index.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-gluster.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-salt-minion.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-ssh-keys.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-puppet.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-boot-cmds.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-rh_subscription.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/upstart-cloud-config.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-chef-oneiric.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/part-handler-v2.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/plain-ignored.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-vendor-data.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/include.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-mcollective.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-apt.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-mount-points.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-datasources.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-add-apt-repos.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/upstart-rclocal.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+copying doc/examples/cloud-config-rsyslog.txt -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples/seed
+copying doc/examples/seed/meta-data -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples/seed
+copying doc/examples/seed/README -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples/seed
+copying doc/examples/seed/user-data -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/share/doc/cloud-init/examples/seed
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/NetworkManager
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/NetworkManager/dispatcher.d
+copying tools/hook-network-manager -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/NetworkManager/dispatcher.d/
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/dhcp
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/dhcp/dhclient-exit-hooks.d
+copying tools/hook-dhclient -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/etc/dhcp/dhclient-exit-hooks.d/
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/udev
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/udev/rules.d
+copying udev/66-azure-ephemeral.rules -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/udev/rules.d
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system
+copying RENDERED_TEMPDaSIgGL/cloud-init-local.service -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system
+copying RENDERED_TEMPDgJTdU6/cloud-final.service -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system
+copying RENDERED_TEMPDA3CVsp/cloud-config.service -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system
+copying RENDERED_TEMPDIRQ828/cloud-init.service -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system
+copying systemd/cloud-init.target -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system
+copying systemd/cloud-config.target -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system-generators
+copying systemd/cloud-init-generator -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/lib/systemd/system-generators
+running install_egg_info
+running egg_info
+writing requirements to cloud_init.egg-info/requires.txt
+writing cloud_init.egg-info/PKG-INFO
+writing top-level names to cloud_init.egg-info/top_level.txt
+writing dependency_links to cloud_init.egg-info/dependency_links.txt
+writing entry points to cloud_init.egg-info/entry_points.txt
+writing manifest file 'cloud_init.egg-info/SOURCES.txt'
+reading manifest file 'cloud_init.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+no previously-included directories found matching '.tox'
+no previously-included directories found matching '.git'
+no previously-included directories found matching '.bzr'
+warning: no previously-included files found matching '.gitignore'
+warning: no previously-included files found matching '.bzrignore'
+writing manifest file 'cloud_init.egg-info/SOURCES.txt'
+Copying cloud_init.egg-info to /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/lib/python2.7/dist-packages/cloud_init-18.1.egg-info
+running install_scripts
+creating /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/bin
+copying build/scripts-2.7/cloud-init-per -> /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/bin
+changing mode of /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/bin/cloud-init-per to 775
+Installing cloud-init script to /root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380/debian/cloud-init/usr/bin
+install -D -m 0644 debian/net-convert-debian-ubuntu-only.py debian/cloud-init/usr/bin/net-convert.py
+install -D -m 0644 ./tools/21-cloudinit.conf debian/cloud-init/etc/rsyslog.d/21-cloudinit.conf
+install -D ./tools/Z99-cloud-locale-test.sh debian/cloud-init/etc/profile.d/Z99-cloud-locale-test.sh
+install -D ./tools/Z99-cloudinit-warnings.sh debian/cloud-init/etc/profile.d/Z99-cloudinit-warnings.sh
+install -m 0644 -D debian/apport-launcher.py debian/cloud-init/usr/share/apport/package-hooks/cloud-init.py
+rm -rvf debian/cloud-init/lib/systemd
+removed ‘debian/cloud-init/lib/systemd/system/cloud-config.service’
+removed ‘debian/cloud-init/lib/systemd/system/cloud-init.target’
+removed ‘debian/cloud-init/lib/systemd/system/cloud-init.service’
+removed ‘debian/cloud-init/lib/systemd/system/cloud-final.service’
+removed ‘debian/cloud-init/lib/systemd/system/cloud-config.target’
+removed ‘debian/cloud-init/lib/systemd/system/cloud-init-local.service’
+removed directory: ‘debian/cloud-init/lib/systemd/system’
+removed ‘debian/cloud-init/lib/systemd/system-generators/cloud-init-generator’
+removed directory: ‘debian/cloud-init/lib/systemd/system-generators’
+removed directory: ‘debian/cloud-init/lib/systemd’
+make[1]: Leaving directory '/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380'
+   dh_install -O--buildsystem=python_distutils
+   dh_installdocs -O--buildsystem=python_distutils
+   dh_installchangelogs -O--buildsystem=python_distutils
+   dh_installdebconf -O--buildsystem=python_distutils
+   dh_python2 -O--buildsystem=python_distutils
+   debian/rules override_dh_installinit
+make[1]: Entering directory '/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380'
+dh_installinit --no-start --no-restart-on-upgrade --name cloud-init-local
+dh_installinit --no-start --no-restart-on-upgrade
+dh_installinit --no-start --no-restart-on-upgrade --name cloud-config
+dh_installinit --no-start --no-restart-on-upgrade --name cloud-final
+make[1]: Leaving directory '/root/work/jessie-debian8-cloud-init/cloud-init-18.1-5-g40e77380'
+   dh_lintian -O--buildsystem=python_distutils
+   dh_perl -O--buildsystem=python_distutils
+   dh_link -O--buildsystem=python_distutils
+   dh_strip_nondeterminism -O--buildsystem=python_distutils
+   dh_compress -O--buildsystem=python_distutils
+   dh_fixperms -O--buildsystem=python_distutils
+   dh_installdeb -O--buildsystem=python_distutils
+   dh_gencontrol -O--buildsystem=python_distutils
+   dh_md5sums -O--buildsystem=python_distutils
+   dh_builddeb -O--buildsystem=python_distutils
+dpkg-deb: building package `cloud-init' in `../cloud-init_18.1-5-g40e77380-0ubuntu12_all.deb'.
+dpkg-deb: building package `grub-legacy-ec2' in `../grub-legacy-ec2_18.1-5-g40e77380-0ubuntu12_all.deb'.
+ dpkg-genchanges -b >../cloud-init_18.1-5-g40e77380-0ubuntu12_amd64.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source --after-build cloud-init-18.1-5-g40e77380
+dpkg-source: info: using options from cloud-init-18.1-5-g40e77380/debian/source/options: --extend-diff-ignore=\.pyc$
+dpkg-source: info: unapplying disable-rhel-set-hostname-test.patch
+dpkg-source: info: unapplying fix-path-to-blkid-binary.patch
+dpkg-buildpackage: binary-only upload (no source included)
+Now running lintian...
+warning: the authors of lintian do not recommend running it with root privileges!
+E: cloud-init changes: bad-distribution-in-changes-file debian8.x
+W: cloud-init: debian-changelog-line-too-long line 2
+E: cloud-init: multiline-field maintainer
+E: cloud-init: maintainer-address-malformed Scott Moser <smoser@ubuntu.com>,           Charles Plessy <plessy@debian.org>
+W: cloud-init: script-with-language-extension usr/bin/net-convert.py
+E: cloud-init: init.d-script-missing-dependency-on-remote_fs etc/init.d/cloud-final: required-stop
+E: cloud-init: init.d-script-depends-on-all-virtual-facility etc/init.d/cloud-final required-start
+E: cloud-init: init.d-script-missing-dependency-on-remote_fs etc/init.d/cloud-config: required-start
+E: cloud-init: init.d-script-missing-dependency-on-remote_fs etc/init.d/cloud-config: required-stop
+E: cloud-init: init.d-script-missing-dependency-on-remote_fs etc/init.d/cloud-init-local: required-stop
+W: cloud-init: binary-without-manpage usr/bin/cloud-init
+W: cloud-init: binary-without-manpage usr/bin/cloud-init-per
+W: cloud-init: binary-without-manpage usr/bin/net-convert.py
+W: cloud-init: script-not-executable etc/profile.d/Z99-cloud-locale-test.sh
+E: cloud-init: python-script-but-no-python-dep usr/bin/net-convert.py
+W: grub-legacy-ec2: debian-changelog-line-too-long line 2
+E: grub-legacy-ec2: multiline-field maintainer
+E: grub-legacy-ec2: maintainer-address-malformed Scott Moser <smoser@ubuntu.com>,           Charles Plessy <plessy@debian.org>
+E: grub-legacy-ec2: depends-on-essential-package-without-using-version depends: util-linux
+W: grub-legacy-ec2: binary-without-manpage usr/sbin/grub-set-default
+W: grub-legacy-ec2: binary-without-manpage usr/sbin/grub-set-default-legacy-ec2
+W: grub-legacy-ec2: binary-without-manpage usr/sbin/update-grub-legacy-ec2
+N: 3 tags overridden (2 errors, 1 warning)
+Finished running lintian.

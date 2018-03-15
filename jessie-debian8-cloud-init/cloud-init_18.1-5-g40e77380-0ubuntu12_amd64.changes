@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 15 Mar 2018 13:28:04 -0700
+Source: cloud-init
+Binary: cloud-init grub-legacy-ec2
+Architecture: all
+Version: 18.1-5-g40e77380-0ubuntu12
+Distribution: debian8.x
+Urgency: medium
+Maintainer: Scott Moser <smoser@ubuntu.com>,
+           Charles Plessy <plessy@debian.org>
+Changed-By: Naoto Gohko <naoto-gohko@gmo.jp>
+Description:
+ cloud-init - initialization system for infrastructure cloud instances
+ grub-legacy-ec2 - Handles update-grub for ec2 instances
+Changes:
+ cloud-init (18.1-5-g40e77380-0ubuntu12) debian8.x; urgency=medium
+ .
+     - modified debian only support tools (sysconfig is disable) cli on /usr/bin/net-convert.py
+     - porting from xenial(16.04) to debian8.x, debian9.x
+Checksums-Sha1:
+ 48f6605dd4ff49fcf6563b17322d88179ca1c409 382762 cloud-init_18.1-5-g40e77380-0ubuntu12_all.deb
+ 6be3b3d953e3d307404b83f36b63ddea415ce0f0 64808 grub-legacy-ec2_18.1-5-g40e77380-0ubuntu12_all.deb
+Checksums-Sha256:
+ e3396a1b9f3a2995379407c3a4f8bade74d43e5df6eebb79a27360a173a55a2f 382762 cloud-init_18.1-5-g40e77380-0ubuntu12_all.deb
+ e115300193e86467a0c7a48f045fc479f0b3d9d3051175ffb79e5fe60929d7de 64808 grub-legacy-ec2_18.1-5-g40e77380-0ubuntu12_all.deb
+Files:
+ 6478e1f2f16cc8b123d712ff62c96f1d 382762 admin optional cloud-init_18.1-5-g40e77380-0ubuntu12_all.deb
+ 4f1cd1aee8ca78575a207de3945b2869 64808 admin optional grub-legacy-ec2_18.1-5-g40e77380-0ubuntu12_all.deb

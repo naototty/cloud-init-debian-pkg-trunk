@@ -3,9 +3,16 @@
 %:
 	dh $@ --with python2 --buildsystem=python_distutils
 
-## override_dh_install:
-## 	dh_install
-## 	rm -rf debian/cloud-init/usr/lib/python?.?/dist-packages/tests
+override_dh_auto_test:
+ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
+	http_proxy= make PYVER=python2 check
+else
+	@echo check disabled by DEB_BUILD_OPTIONS=$(DEB_BUILD_OPTIONS)
+endif
+
+override_dh_install:
+	dh_install
+	rm -rf debian/cloud-init/usr/lib/python?.?/dist-packages/tests
 
 ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
 override_dh_auto_test:
@@ -21,9 +28,8 @@ override_dh_installinit:
 
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/cloud-init
-	install -D -m 0644 debian/net-convert-debian-ubuntu-only.py debian/cloud-init/usr/bin/net-convert.py
+	install -D -m 0644 ./tools/net-convert.py debian/cloud-init/usr/bin/net-convert.py
 	install -D -m 0644 ./tools/21-cloudinit.conf debian/cloud-init/etc/rsyslog.d/21-cloudinit.conf
 	install -D ./tools/Z99-cloud-locale-test.sh debian/cloud-init/etc/profile.d/Z99-cloud-locale-test.sh
 	install -D ./tools/Z99-cloudinit-warnings.sh debian/cloud-init/etc/profile.d/Z99-cloudinit-warnings.sh
 	install -m 0644 -D debian/apport-launcher.py debian/cloud-init/usr/share/apport/package-hooks/cloud-init.py
-	rm -rvf debian/cloud-init/lib/systemd

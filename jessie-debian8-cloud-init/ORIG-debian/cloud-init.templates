@@ -1,0 +1,12 @@
+Template: cloud-init/datasources
+Type: multiselect
+Default: NoCloud, AltCloud, CloudStack, ConfigDrive, Ec2, MAAS, OVF, GCE, None
+Choices-C: NoCloud, AltCloud, CloudStack, ConfigDrive, Ec2, MAAS, OVF, GCE, None
+__Choices: /var/lib/cloud/seed only, AltCloud Config Drive, CloudStack metadata service, OpenStack Config Drive, EC2 Metadata service, Ubuntu MAAS, OVF Transports, Google Cloud Engine, Failsafe datasource
+_Description: Data sources to read from:
+ Cloud-init supports searching different "Data Sources" for information
+ that it uses to configure a cloud instance.
+ .
+ Please note that "EC2 Metadata service" should be used only if
+ the EC2 metadata service is present. Otherwise, it will trigger
+ a very noticeable timeout on boot.

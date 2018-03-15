@@ -1,0 +1,4 @@
+misc:Depends=debconf (>= 0.5) | debconf-2.0
+python:Versions=2.7
+python:Depends=python, python-configobj, python-jinja2, python-jsonpatch, python-jsonschema, python-oauthlib, python-requests, python-six, python-yaml, python:any (<< 2.8), python:any (>= 2.7.5-5~), python:any (>= 2.7~)
+misc:Pre-Depends=

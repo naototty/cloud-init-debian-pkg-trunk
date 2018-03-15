@@ -1,9 +1,3 @@
-cloud-init (18.1-5-g40e77380-0ubuntu12) debian8.x; urgency=medium
-    - modified debian only support tools (sysconfig is disable) cli on /usr/bin/net-convert.py
-    - porting from xenial(16.04) to debian8.x, debian9.x
-
- -- Naoto Gohko <naoto-gohko@gmo.jp>  Thu, 15 Mar 2018 13:28:04 -0700
-
 cloud-init (18.1-5-g40e77380-0ubuntu11) xenial; urgency=medium
     - add tools cli on /usr/bin/net-convert.py
     - porting from bionic(18.04) to xenial(16.04)

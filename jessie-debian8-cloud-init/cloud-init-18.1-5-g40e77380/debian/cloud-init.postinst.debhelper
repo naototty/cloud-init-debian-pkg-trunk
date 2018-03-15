@@ -1,0 +1,35 @@
+
+# Automatically added by dhpython:
+if which pycompile >/dev/null 2>&1; then
+	pycompile -p cloud-init 
+fi
+
+# End automatically added section
+# Automatically added by dh_installinit
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	if [ -x "/etc/init.d/cloud-init-local" ]; then
+		update-rc.d cloud-init-local defaults >/dev/null || exit $?
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	if [ -x "/etc/init.d/cloud-init" ]; then
+		update-rc.d cloud-init defaults >/dev/null || exit $?
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	if [ -x "/etc/init.d/cloud-config" ]; then
+		update-rc.d cloud-config defaults >/dev/null || exit $?
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	if [ -x "/etc/init.d/cloud-final" ]; then
+		update-rc.d cloud-final defaults >/dev/null || exit $?
+	fi
+fi
+# End automatically added section

@@ -1,0 +1,16 @@
+Description: Fix the path to blkid in test suite
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: https://bugs.launchpad.net/cloud-init/+bug/1275415
+Last-Update: 2013-05-28
+
+--- cloud-init-0.7.2.orig/cloudinit/util.py
++++ cloud-init-0.7.2/cloudinit/util.py
+@@ -1022,7 +1022,7 @@ def find_devs_with(criteria=None, oforma
+       LABEL=<label>
+       UUID=<uuid>
+     """
+-    blk_id_cmd = ['blkid']
++    blk_id_cmd = ['/sbin/blkid']
+     options = []
+     if criteria:
+         # Search for block devices with tokens named NAME that

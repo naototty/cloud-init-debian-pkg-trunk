@@ -72,7 +72,7 @@ CI_SYSTEM_BASE_PKGS = {
     'redhat': ['python-tox'],
     'centos': ['python-tox'],
     'ubuntu': ['devscripts', 'python3-dev', 'libssl-dev', 'tox', 'sbuild'],
-    'debian': ['devscripts', 'python3-dev', 'libssl-dev', 'tox', 'sbuild']}
+    'debian': ['devscripts', 'python2-dev', 'libssl-dev', 'tox', 'sbuild']}
 
 
 # JSON definition of distro-specific package dependencies
